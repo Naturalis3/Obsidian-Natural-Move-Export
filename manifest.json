@@ -3,8 +3,8 @@
 	"name": "Natural Move/Export",
 	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "Seamlessly bridge Obsidian and your OS. Copy files/folders to system clipboard, drag & drop with Alt, and professional Pandoc exports with custom Word templates.",
+	"description": "Native system copy-paste, drag & drop, and professional Pandoc exports.",
 	"author": "Naturalis",
-	"authorUrl": "https://obsidian.md",
+	"authorUrl": "https://github.com/Naturalis3",
 	"isDesktopOnly": true
 }
