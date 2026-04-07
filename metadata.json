@@ -1,0 +1,5 @@
+{
+  "name": "Natural Move/Export",
+  "description": "Native system copy-paste, drag & drop, and professional Pandoc exports directly from Obsidian.",
+  "requestFramePermissions": []
+}
