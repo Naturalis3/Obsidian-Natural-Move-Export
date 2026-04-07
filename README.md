@@ -72,3 +72,9 @@ brew install --cask mactex-no-gui
 2. Download the `MacTeX.pkg` file and run the installer.
 
 After installing Pandoc and MacTeX, you may need to restart Obsidian completely for the new system paths to be recognized. The Natural Move/Ex
+
+## 📅 Status: Coming Soon
+We are currently in the final testing phase. The plugin will be available in the Obsidian Community Store soon.
+
+---
+*Created with ❤️ for the Obsidian Community.*
