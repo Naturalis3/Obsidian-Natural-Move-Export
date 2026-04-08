@@ -1,0 +1,25 @@
+{
+  "name": "obsidian-plugin",
+  "version": "1.0.1",
+  "description": "Ein neues Obsidian Plugin",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production && cat src/index.css > styles.css",
+    "lint": "tsc --noEmit",
+    "css:build": "cat src/index.css > styles.css"
+  },
+  "keywords": [],
+  "author": "Naturalis",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.12.3",
+    "tslib": "^2.8.1",
+    "typescript": "~5.8.2"
+  }
+}
