@@ -2,6 +2,8 @@
  * License verification service for Natural Move/Export
  */
 
+import { requestUrl } from 'obsidian';
+
 export interface LicenseStatus {
     isValid: boolean;
     message?: string;
@@ -24,7 +26,8 @@ export async function verifyLicense(licenseKey: string): Promise<LicenseStatus> 
     try {
         // Wir nutzen den offiziellen Lemon Squeezy Activation Endpoint.
         // Dieser benötigt KEINEN geheimen API-Key, da er für Client-Apps gedacht ist.
-        const response = await fetch('https://api.lemonsqueezy.com/v1/licenses/activate', {
+        const response = await requestUrl({
+            url: 'https://api.lemonsqueezy.com/v1/licenses/activate',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -36,7 +39,7 @@ export async function verifyLicense(licenseKey: string): Promise<LicenseStatus> 
             })
         });
 
-        const data = await response.json();
+        const data = response.json;
 
         // Lemon Squeezy gibt 'activated: true' zurück, wenn der Key gültig ist.
         if (data.activated === true) {

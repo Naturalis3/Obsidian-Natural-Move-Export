@@ -1,13 +1,13 @@
-import { App, Editor, MarkdownView, Notice, Plugin, TFile, TFolder, TAbstractFile, MenuItem, PluginSettingTab, Setting, FileSystemAdapter } from 'obsidian';
+import { App, Notice, Plugin, TFile, TFolder, TAbstractFile, Menu, MenuItem, PluginSettingTab, Setting, FileSystemAdapter } from 'obsidian';
 import * as fs from 'fs';
 import * as path from 'path';
 import { exec } from 'child_process';
 import * as os from 'os';
 import { t } from './lang/helpers';
 import { verifyLicense } from './license';
+import * as electron from 'electron';
 
 // Wir nutzen Electron für den Zugriff auf das Dateisystem-Clipboard und Drag & Drop
-const electron = require('electron');
 const { clipboard } = electron;
 
 interface NaturalMoveSettings {
@@ -55,7 +55,7 @@ export default class NaturalMove extends Plugin {
 	private boundKeyDownHandler!: (evt: KeyboardEvent) => void;
 
 	async onload() {
-		console.log(t('LOAD_PLUGIN'));
+		console.debug(t('LOAD_PLUGIN'));
 		await this.loadSettings();
 
 		// Pro-Status beim Start prüfen (falls Key vorhanden)
@@ -102,7 +102,7 @@ export default class NaturalMove extends Plugin {
 
 					evt.preventDefault();
 					evt.stopPropagation();
-					this.copyFilesToClipboard(files);
+					void this.copyFilesToClipboard(files);
 				}
 			}
 		};
@@ -121,7 +121,7 @@ export default class NaturalMove extends Plugin {
 						new Notice(t('PRO_FEATURE_LOCKED'));
 						return;
 					}
-					this.copyFilesToClipboard(files);
+					void this.copyFilesToClipboard(files);
 				} else {
 					new Notice(t('NO_FILES_SELECTED'));
 				}
@@ -153,8 +153,8 @@ export default class NaturalMove extends Plugin {
 	}
 
 	onunload() {
-		console.log(t('UNLOAD_PLUGIN'));
-		if (this.audioCtx) this.audioCtx.close();
+		console.debug(t('UNLOAD_PLUGIN'));
+		if (this.audioCtx) void this.audioCtx.close();
 		document.getElementById('natural-move-style')?.remove();
 		document.removeEventListener('dragstart', this.boundDragStartHandler, true);
 		document.removeEventListener('keydown', this.boundKeyDownHandler, true);
@@ -212,7 +212,7 @@ export default class NaturalMove extends Plugin {
 
 		// 1. Versuch: Native Electron Drag (startDrag)
 		try {
-			const remote = require('@electron/remote');
+			const remote = (window as unknown as { require: (mod: string) => { getCurrentWebContents: () => { startDrag: (item: unknown) => void } } }).require('@electron/remote');
 			const wc = remote.getCurrentWebContents();
 
 			if (typeof wc.startDrag === 'function') {
@@ -224,12 +224,12 @@ export default class NaturalMove extends Plugin {
 				try {
 					const transparent1x1 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 					iconImage = electron.nativeImage.createFromDataURL(transparent1x1);
-				} catch (e) {
+				} catch (_e) {
 					iconImage = "";
 				}
 
 				if (this.audioCtx?.state === 'suspended') {
-					this.audioCtx.resume();
+					void this.audioCtx.resume();
 				}
 
 				wc.startDrag({
@@ -241,8 +241,8 @@ export default class NaturalMove extends Plugin {
 				nativeDragSuccess = true;
 				setTimeout(() => this.playSuccessSound(), 500);
 			}
-		} catch (e) {
-			console.log("Native drag not available, falling back to HTML5 drag");
+		} catch (_e) {
+			console.debug("Native drag not available, falling back to HTML5 drag");
 		}
 
 		// 2. Fallback: HTML5 Drag (DownloadURL / ZIP)
@@ -303,7 +303,7 @@ export default class NaturalMove extends Plugin {
 	//  Hilfsfunktionen
 	// ──────────────────────────────────────────────
 
-	private addCopyMenuItems(menu: any, files: TAbstractFile[], isLink: boolean = false) {
+	private addCopyMenuItems(menu: Menu, files: TAbstractFile[], isLink: boolean = false) {
 		const fileCount = files.length;
 		const labelSuffix = fileCount > 1 ? ` (${fileCount})` : '';
 		const prefix = isLink ? t('LINKED_FILE') : '';
@@ -356,7 +356,7 @@ export default class NaturalMove extends Plugin {
 					return;
 				}
 
-				const exportSubmenu = (mainItem as any).setSubmenu();
+				const exportSubmenu = (mainItem as MenuItem & { setSubmenu: () => Menu }).setSubmenu();
 
 				Object.entries(PANDOC_FORMATS).forEach(([key, format]) => {
 					exportSubmenu.addItem((formatItem: MenuItem) => {
@@ -364,7 +364,7 @@ export default class NaturalMove extends Plugin {
 							.setTitle(t(format.menuKey))
 							.setIcon(format.icon);
 
-						const formatSubmenu = (formatItem as any).setSubmenu();
+						const formatSubmenu = (formatItem as MenuItem & { setSubmenu: () => Menu }).setSubmenu();
 
 						// 1. Standard Export (No Template)
 						formatSubmenu.addItem((item: MenuItem) => {
@@ -442,7 +442,7 @@ export default class NaturalMove extends Plugin {
 		return files;
 	}
 
-	private async copyFilesToClipboard(files: TAbstractFile[]) {
+	private copyFilesToClipboard(files: TAbstractFile[]) {
 		const absolutePaths = files
 			.map(f => this.getAbsolutePath(f))
 			.filter((p): p is string => p !== null);
@@ -504,7 +504,7 @@ pb's writeObjects:fileArray
 		}
 	}
 
-	private async copyToTargetFolder(files: TAbstractFile[]) {
+	private copyToTargetFolder(files: TAbstractFile[]) {
 		if (!this.settings.isPro) {
 			new Notice(t('PRO_FEATURE_LOCKED'));
 			return;
@@ -639,8 +639,8 @@ pb's writeObjects:fileArray
 
 	private initAudio() {
 		try {
-			this.audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-		} catch (e) {
+			this.audioCtx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+		} catch (_e) {
 			console.error('AudioContext konnte nicht initialisiert werden');
 		}
 	}
@@ -649,7 +649,7 @@ pb's writeObjects:fileArray
 		if (!this.settings.enableAudioFeedback) return;
 		
 		if (this.audioCtx?.state === 'suspended') {
-			this.audioCtx.resume();
+			void this.audioCtx.resume();
 		}
 
 		if (!this.audioCtx) return;
@@ -697,23 +697,25 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 		const {containerEl} = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', {text: t('SETTINGS_TITLE')});
+		new Setting(containerEl).setName(t('SETTINGS_TITLE')).setHeading();
 
 		// --- LICENSE SECTION ---
-		const licenseHeader = containerEl.createEl('h3', { text: t('SETTING_LICENSE_KEY_NAME') });
+		const licenseSetting = new Setting(containerEl).setName(t('SETTING_LICENSE_KEY_NAME')).setHeading();
 		if (this.plugin.settings.isPro) {
-			const badge = licenseHeader.createEl('span', { 
+			licenseSetting.nameEl.createEl('span', { 
 				text: ' PRO', 
 				cls: 'natural-move-pro-badge' 
 			});
-			badge.style.backgroundColor = 'var(--interactive-accent)';
-			badge.style.color = 'var(--text-on-accent)';
-			badge.style.fontSize = '0.7em';
-			badge.style.padding = '2px 6px';
-			badge.style.borderRadius = '4px';
-			badge.style.marginLeft = '8px';
-			badge.style.verticalAlign = 'middle';
 		}
+
+		new Setting(containerEl)
+			.setName(t('SETTING_BUY_PRO_NAME'))
+			.setDesc(t('SETTING_BUY_PRO_DESC'))
+			.addButton(btn => btn
+				.setButtonText(t('SETTING_BUY_PRO_BUTTON'))
+				.onClick(() => {
+					window.open("https://naturalis.lemonsqueezy.com/checkout/buy/9223dcd2-5bd9-4787-a1cc-3972c78b067b");
+				}));
 
 		new Setting(containerEl)
 			.setName(t('SETTING_LICENSE_KEY_NAME'))
@@ -773,7 +775,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				
 				if (!this.plugin.settings.isPro) {
 					text.inputEl.disabled = true;
-					text.inputEl.style.opacity = '0.5';
+					text.inputEl.classList.add('natural-move-disabled');
 				}
 				return text;
 			});
@@ -792,7 +794,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				
 				if (!this.plugin.settings.isPro) {
 					text.inputEl.disabled = true;
-					text.inputEl.style.opacity = '0.5';
+					text.inputEl.classList.add('natural-move-disabled');
 				}
 				return text;
 			});
@@ -812,7 +814,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				// Lock if not Pro
 				if (!this.plugin.settings.isPro) {
 					text.inputEl.disabled = true;
-					text.inputEl.style.opacity = '0.5';
+					text.inputEl.classList.add('natural-move-disabled');
 					text.inputEl.title = t('PRO_FEATURE_LOCKED');
 				}
 				return text;
@@ -832,7 +834,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				
 				if (!this.plugin.settings.isPro) {
 					text.inputEl.disabled = true;
-					text.inputEl.style.opacity = '0.5';
+					text.inputEl.classList.add('natural-move-disabled');
 				}
 				return text;
 			});
