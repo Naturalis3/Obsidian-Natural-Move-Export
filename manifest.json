@@ -1,7 +1,7 @@
 {
 	"id": "natural-move",
 	"name": "Natural Move/Export",
-	"version": "0.1.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Native system copy-paste, drag & drop, and professional Pandoc exports.",
 	"author": "Naturalis",

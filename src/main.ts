@@ -18,6 +18,7 @@ interface NaturalMoveSettings {
 	customPandocArgs: string;
 	wordTemplatesFolderPath: string;
 	licenseKey: string;
+	instanceId: string;
 	isPro: boolean;
 }
 
@@ -28,6 +29,7 @@ const DEFAULT_SETTINGS: NaturalMoveSettings = {
 	customPandocArgs: '',
 	wordTemplatesFolderPath: '',
 	licenseKey: '',
+	instanceId: '',
 	isPro: false
 }
 
@@ -61,13 +63,19 @@ export default class NaturalMove extends Plugin {
 
 		// Pro-Status beim Start prüfen (falls Key vorhanden)
 		if (this.settings.licenseKey) {
-			const status = await verifyLicense(this.settings.licenseKey);
+			const status = await verifyLicense(this.settings.licenseKey, this.settings.instanceId);
 			// Nur wenn der Server explizit sagt "Ungültig", entziehen wir Pro.
 			// Bei Verbindungsfehlern behalten wir den gespeicherten Status bei.
 			if (status.isValid) {
 				this.settings.isPro = true;
+				if (status.instanceId) {
+					this.settings.instanceId = status.instanceId;
+					await this.saveSettings();
+				}
 			} else if (status.errorType === 'invalid') {
 				this.settings.isPro = false;
+				this.settings.instanceId = '';
+				await this.saveSettings();
 			}
 			// Bei 'connection' lassen wir isPro einfach so, wie es in den Settings steht.
 		} else {
@@ -396,8 +404,9 @@ export default class NaturalMove extends Plugin {
 									templateFiles.forEach(templateFile => {
 										formatSubmenu.addItem((item: MenuItem) => {
 											const templateName = path.basename(templateFile, path.extname(templateFile));
+											const isExperimental = ['pdf', 'beamer', 'pptx'].includes(key);
 											item
-												.setTitle(t('EXPORT_WITH_TEMPLATE', templateName))
+												.setTitle(t('EXPORT_WITH_TEMPLATE', templateName) + (isExperimental ? ' ' + t('EXPERIMENTAL') : ''))
 												.setIcon('file-text')
 												.onClick(async () => {
 													const templatePath = path.join(this.settings.wordTemplatesFolderPath, templateFile);
@@ -731,6 +740,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 					// Wenn der Key gelöscht wird, Pro sofort deaktivieren
 					if (!trimmedValue) {
 						this.plugin.settings.isPro = false;
+						this.plugin.settings.instanceId = '';
 						await this.plugin.saveSettings();
 						this.display(); // UI aktualisieren (Felder sperren)
 					} else {
@@ -741,23 +751,36 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				.setButtonText(t('SETTING_LICENSE_VERIFY_BUTTON'))
 				.setCta()
 				.onClick(async () => {
-					const status = await verifyLicense(this.plugin.settings.licenseKey);
+					// Verhindere Mehrfach-Klicks
+					btn.setDisabled(true);
+					btn.setButtonText("...");
 					
-					if (status.isValid) {
-						this.plugin.settings.isPro = true;
-						new Notice(t('LICENSE_VALID'));
-					} else {
-						if (status.errorType === 'invalid') {
-							this.plugin.settings.isPro = false;
-							new Notice(t('LICENSE_INVALID') + (status.message ? `: ${status.message}` : ''));
+					try {
+						const status = await verifyLicense(this.plugin.settings.licenseKey, this.plugin.settings.instanceId);
+						
+						if (status.isValid) {
+							this.plugin.settings.isPro = true;
+							if (status.instanceId) {
+								this.plugin.settings.instanceId = status.instanceId;
+							}
+							new Notice(t('LICENSE_VALID'));
 						} else {
-							// Verbindungsfehler: Wir lassen den Status wie er ist, informieren aber den User
-							new Notice(status.message || "Connection error");
+							if (status.errorType === 'invalid') {
+								this.plugin.settings.isPro = false;
+								this.plugin.settings.instanceId = '';
+								new Notice(t('LICENSE_INVALID') + (status.message ? `: ${status.message}` : ''));
+							} else {
+								// Verbindungsfehler: Wir lassen den Status wie er ist, informieren aber den User
+								new Notice(status.message || "Connection error");
+							}
 						}
+						
+						await this.plugin.saveSettings();
+						this.display(); // Refresh UI
+					} finally {
+						btn.setDisabled(false);
+						btn.setButtonText(t('SETTING_LICENSE_VERIFY_BUTTON'));
 					}
-					
-					await this.plugin.saveSettings();
-					this.display(); // Refresh UI
 				}));
 
 		containerEl.createEl('hr');
