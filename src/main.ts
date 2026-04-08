@@ -5,6 +5,7 @@ import { exec } from 'child_process';
 import * as os from 'os';
 import { t } from './lang/helpers';
 import { verifyLicense } from './license';
+// @ts-ignore
 import * as electron from 'electron';
 
 // Wir nutzen Electron für den Zugriff auf das Dateisystem-Clipboard und Drag & Drop
@@ -224,7 +225,7 @@ export default class NaturalMove extends Plugin {
 				try {
 					const transparent1x1 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 					iconImage = electron.nativeImage.createFromDataURL(transparent1x1);
-				} catch (_e) {
+				} catch {
 					iconImage = "";
 				}
 
@@ -241,7 +242,7 @@ export default class NaturalMove extends Plugin {
 				nativeDragSuccess = true;
 				setTimeout(() => this.playSuccessSound(), 500);
 			}
-		} catch (_e) {
+		} catch {
 			console.debug("Native drag not available, falling back to HTML5 drag");
 		}
 
@@ -316,12 +317,12 @@ export default class NaturalMove extends Plugin {
 				.setTitle(title)
 				.setIcon('copy')
 				.setSection('action')
-				.onClick(async () => {
+				.onClick(() => {
 					if (hasFolder && !this.settings.isPro) {
 						new Notice(t('PRO_FEATURE_LOCKED'));
 						return;
 					}
-					await this.copyFilesToClipboard(files);
+					this.copyFilesToClipboard(files);
 				});
 		});
 
@@ -332,12 +333,12 @@ export default class NaturalMove extends Plugin {
 				.setTitle(title)
 				.setIcon('folder-check')
 				.setSection('action')
-				.onClick(async () => {
+				.onClick(() => {
 					if (!this.settings.isPro) {
 						new Notice(t('PRO_FEATURE_LOCKED'));
 						return;
 					}
-					await this.copyToTargetFolder(files);
+					this.copyToTargetFolder(files);
 				});
 		});
 
@@ -361,7 +362,7 @@ export default class NaturalMove extends Plugin {
 				Object.entries(PANDOC_FORMATS).forEach(([key, format]) => {
 					exportSubmenu.addItem((formatItem: MenuItem) => {
 						formatItem
-							.setTitle(t(format.menuKey))
+							.setTitle(t(format.menuKey as any))
 							.setIcon(format.icon);
 
 						const formatSubmenu = (formatItem as MenuItem & { setSubmenu: () => Menu }).setSubmenu();
@@ -640,7 +641,7 @@ pb's writeObjects:fileArray
 	private initAudio() {
 		try {
 			this.audioCtx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-		} catch (_e) {
+		} catch {
 			console.error('AudioContext konnte nicht initialisiert werden');
 		}
 	}
@@ -703,7 +704,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 		const licenseSetting = new Setting(containerEl).setName(t('SETTING_LICENSE_KEY_NAME')).setHeading();
 		if (this.plugin.settings.isPro) {
 			licenseSetting.nameEl.createEl('span', { 
-				text: ' PRO', 
+				text: ' Pro', 
 				cls: 'natural-move-pro-badge' 
 			});
 		}
@@ -721,7 +722,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setName(t('SETTING_LICENSE_KEY_NAME'))
 			.setDesc(t('SETTING_LICENSE_KEY_DESC'))
 			.addText(text => text
-				.setPlaceholder('NM-XXXX-XXXX-XXXX')
+				.setPlaceholder('NM-xxxx-xxxx-xxxx')
 				.setValue(this.plugin.settings.licenseKey)
 				.onChange(async (value) => {
 					const trimmedValue = value.trim();
@@ -766,7 +767,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setDesc(t('SETTING_TARGET_FOLDER_DESC'))
 			.addText(text => {
 				text
-					.setPlaceholder('/Pfad/zum/Ordner')
+					.setPlaceholder(t('PLACEHOLDER_TARGET_FOLDER'))
 					.setValue(this.plugin.settings.targetFolderPath)
 					.onChange(async (value) => {
 						this.plugin.settings.targetFolderPath = value.trim();
@@ -825,7 +826,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setDesc(t('SETTING_WORD_TEMPLATES_FOLDER_DESC'))
 			.addText(text => {
 				text
-					.setPlaceholder('/Pfad/zu/Vorlagen')
+					.setPlaceholder(t('PLACEHOLDER_TEMPLATES_FOLDER'))
 					.setValue(this.plugin.settings.wordTemplatesFolderPath)
 					.onChange(async (value) => {
 						this.plugin.settings.wordTemplatesFolderPath = value.trim();
