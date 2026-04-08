@@ -33,12 +33,14 @@ const DEFAULT_SETTINGS: NaturalMoveSettings = {
 	isPro: false
 }
 
+import en from './lang/locale/en';
+
 interface PandocFormat {
 	name: string;
 	ext: string;
 	args: string;
 	icon: string;
-	menuKey: string;
+	menuKey: keyof typeof en;
 }
 
 const PANDOC_FORMATS: Record<string, PandocFormat> = {
@@ -370,7 +372,7 @@ export default class NaturalMove extends Plugin {
 				Object.entries(PANDOC_FORMATS).forEach(([key, format]) => {
 					exportSubmenu.addItem((formatItem: MenuItem) => {
 						formatItem
-							.setTitle(t(format.menuKey as any))
+							.setTitle(t(format.menuKey as keyof typeof en))
 							.setIcon(format.icon);
 
 						const formatSubmenu = (formatItem as MenuItem & { setSubmenu: () => Menu }).setSubmenu();

@@ -28,7 +28,7 @@ export async function verifyLicense(licenseKey: string, instanceId?: string): Pr
         const isValidation = !!instanceId;
         const endpoint = isValidation ? 'validate' : 'activate';
         
-        const body: any = {
+        const body: Record<string, string> = {
             license_key: key,
             instance_name: 'Obsidian Plugin'
         };
