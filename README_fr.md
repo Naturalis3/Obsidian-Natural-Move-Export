@@ -109,3 +109,5 @@ Après avoir installé Pandoc et MacTeX, vous devrez peut-être redémarrer comp
 - **Auteur :** Naturalis
 - **Licence :** MIT
 - **Outils tiers :** Ce plugin utilise [Pandoc](https://pandoc.org/) (sous licence GPL) comme outil de ligne de commande externe pour la conversion de fichiers. Pandoc n'est pas fourni avec ce plugin et doit être installé séparément par l'utilisateur.
+
+Zeitstempeltest 22.00 Uhr
