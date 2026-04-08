@@ -1,6 +1,6 @@
 export default {
-	LOAD_PLUGIN: "Loading natural move/export plugin",
-	UNLOAD_PLUGIN: "Unloading natural move/export plugin",
+	LOAD_PLUGIN: "Loading natural move & export plugin",
+	UNLOAD_PLUGIN: "Unloading natural move & export plugin",
 	COPY_TO_CLIPBOARD: "Natural move: copy to clipboard",
 	COPY_TO_TARGET_FOLDER: "Natural move: copy to target folder",
 	EXPORT_AS_PANDOC: "Export as %1 (.%2) to target folder",
@@ -17,7 +17,7 @@ export default {
 	EXPORTING_FILES: "Exporting %1 file(s) as %2...",
 	EXPORT_SUCCESS: "%1 file(s) successfully exported as %2.",
 	EXPORT_ERROR: "Error during export (%1x). Last error: %2",
-	SETTINGS_TITLE: "Natural move/export settings",
+	SETTINGS_TITLE: "Natural move & export settings",
 	SETTING_TARGET_FOLDER_NAME: "Target folder (absolute path)",
 	SETTING_TARGET_FOLDER_DESC: "Enter the absolute path to the folder on your computer where files should be copied.",
 	SETTING_PANDOC_PATH_NAME: "Pandoc path",
