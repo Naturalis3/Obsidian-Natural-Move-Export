@@ -4,6 +4,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
+
+---
+
 **Natural Move/Export**는 Obsidian과 운영 체제 사이의 간극을 원활하게 메워주는 Obsidian 플러그인입니다. Obsidian의 파일 탐색기를 컴퓨터의 네이티브 폴더처럼 느끼게 해줍니다.
 
 ## 왜 Natural Move/Export인가요?
@@ -52,10 +56,6 @@ Obsidian에서 파일을 선택하고 `Cmd + C` (Mac) 또는 `Ctrl + C` (Win)를
 3. **License Key** 필드에 라이선스 키를 입력합니다.
 4. **Verify**를 클릭합니다.
 5. 활성화되면 모든 프로 기능을 즉시 사용할 수 있습니다.
-
-## 🎬 쇼케이스
-
-*(출시 예정: 플러그인 작동 모습을 담은 비디오/GIF 데모)*
 
 ## 🛠️ Pandoc 내보내기를 위한 선결 조건
 
