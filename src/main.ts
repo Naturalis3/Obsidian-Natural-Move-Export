@@ -733,7 +733,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setName(t('SETTING_LICENSE_KEY_NAME'))
 			.setDesc(t('SETTING_LICENSE_KEY_DESC'))
 			.addText(text => text
-				.setPlaceholder('NM-xxxx-xxxx-xxxx')
+				.setPlaceholder('License key')
 				.setValue(this.plugin.settings.licenseKey)
 				.onChange(async (value) => {
 					const trimmedValue = value.trim();
@@ -811,7 +811,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setDesc(t('SETTING_PANDOC_PATH_DESC'))
 			.addText(text => {
 				text
-					.setPlaceholder('pandoc')
+					.setPlaceholder('Pandoc')
 					.setValue(this.plugin.settings.pandocPath)
 					.onChange(async (value) => {
 						this.plugin.settings.pandocPath = value.trim();
