@@ -2,10 +2,8 @@
 
 [English](README.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Español](README_es.md) | [简体中文](README_zh.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Português](README_pt.md) | [Русский](README_ru.md)
 
-
 ---
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+<div style="max-width: 900px; margin: 40px auto; position: relative; padding-bottom: 50.625%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
   <iframe 
     src="https://www.youtube.com/embed/7rfUTl3iBh8" 
     frameborder="0" 
@@ -14,9 +12,7 @@
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>
-
 ---
-
 
 **Natural Move/Export** is an Obsidian plugin that seamlessly bridges the gap between Obsidian and your operating system. It makes Obsidian's File Explorer feel like a native folder on your computer.
 
