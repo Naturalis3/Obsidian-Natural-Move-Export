@@ -5,7 +5,7 @@
 ---
 
 <video width="100%" controls>
-  <source src="./assets/Natural-move (Readme).mp4" type="video/mp4">
+  <source src="./assets/Demo.mp4" type="video/mp4">
 </video>
 
 ---
