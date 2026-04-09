@@ -4,6 +4,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
+
+---
+
 **Natural Move/Export** est un plugin Obsidian qui comble de manière transparente le fossé entre Obsidian et votre système d'exploitation. Il fait en sorte que l'explorateur de fichiers d'Obsidian ressemble à un dossier natif sur votre ordinateur.
 
 ## Pourquoi Natural Move/Export ?
@@ -52,10 +56,6 @@ Configurez un dossier cible fixe dans les paramètres. Copiez-y des fichiers et 
 3. Entrez votre clé de licence dans le champ **Clé de licence**.
 4. Cliquez sur **Vérifier**.
 5. Une fois activées, toutes les fonctionnalités Pro seront débloquées immédiatement.
-
-## 🎬 Présentation
-
-*(Bientôt disponible : démonstration vidéo/GIF du plugin en action)*
 
 ## 🛠️ Prérequis pour l'exportation Pandoc
 
