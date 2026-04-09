@@ -1,17 +1,22 @@
 # Natural Move/Export
 
-[English](README.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Español](README_es.md) | [简体中文](README_zh.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Português](README_pt.md) | [Русский](README_ru.md)
+[English](index.md) | [Deutsch](index_de.md) | [Français](index_fr.md) | [Español](index_es.md) | [简体中文](index_zh.md) | [日本語](index_ja.md) | [한국어](index_ko.md) | [Português](index_pt.md) | [Русский](index_ru.md)
 
----
+<div style="max-width: 900px; margin: 40px auto; position: relative; padding-bottom: 50.625%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  <iframe 
+    src="https://www.youtube.com/embed/7rfUTl3iBh8" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
-https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
-
----
 **Natural Move/Export** est un plugin Obsidian qui comble de manière transparente le fossé entre Obsidian et votre système d'exploitation. Il fait en sorte que l'explorateur de fichiers d'Obsidian ressemble à un dossier natif sur votre ordinateur.
 
 ## Pourquoi Natural Move/Export ?
 
-L'explorateur de fichiers d'Obsidian est puissant, mais isolé. Copier des fichiers hors d'Obsidian nécessite généralement d'ouvrir d'abord le dossier dans le Finder/Explorateur. **Natural Move/Export** corrige cela en permettant le copier-coller natif à l'échelle du système, le glisser-déposer et les exportations professionnelles directement depuis Obsidian.
+L'explorateur de fichiers d'Obsidian est puissant, mas isolé. Copier des fichiers hors d'Obsidian nécessite généralement d'ouvrir d'abord le dossier dans le Finder/Explorateur. **Natural Move/Export** corrige cela en permettant le copier-coller natif à l'échelle du système, le glisser-déposer et les exportations professionnelles directement depuis Obsidian.
 
 ## ✨ Caractéristiques principales
 

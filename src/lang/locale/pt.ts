@@ -47,7 +47,7 @@ export default {
 	SETTING_BUY_PRO_NAME: "Obter versão pro",
 	SETTING_BUY_PRO_DESC: "Desbloqueie a cópia de pastas, modelos pandoc e argumentos personalizados.",
 	SETTING_BUY_PRO_BUTTON: "Comprar licença",
-	LICENSE_VALID: "Licença válida! Recursos Pro desbloqueados.",
+	LICENSE_VALID: "Licença válida! Recursos pro desbloqueados.",
 	LICENSE_INVALID: "Chave de licença inválida.",
 	PRO_FEATURE_LOCKED: "Este é um recurso pro. Por favor, insira uma chave de licença válida.",
 	COPY_COMMAND_NAME: "Copiar arquivos selecionados (do explorador de arquivos)",

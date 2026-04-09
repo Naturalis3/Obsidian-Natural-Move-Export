@@ -175,45 +175,59 @@ export default class NaturalMove extends Plugin {
 	//  Drag & Drop Handler
 	// ──────────────────────────────────────────────
 	private handleDragStart(evt: DragEvent) {
-		const target = evt.target as Node;
-		const el = target.nodeType === 3 ? target.parentElement : target as HTMLElement;
-		if (!el) return;
+		// 1. Wenn Alt/Option nicht gedrückt ist, machen wir absolut nichts.
+		// Das stellt sicher, dass Obsidian's natives Drag & Drop (Verschieben innerhalb) unberührt bleibt.
+		if (!evt.altKey) {
+			return;
+		}
 
-		// Fall: File Explorer Item
-		if (!evt.altKey) return; 
+		// 2. Wir prüfen, ob der Drag von einem File Explorer Element kommt.
+		const target = evt.target as HTMLElement;
+		if (!target || typeof target.closest !== 'function') return;
 
-		const navFile = el.closest('.nav-file-title, .nav-file, .nav-folder-title, .nav-folder');
-		if (navFile) {
-			const selectedFiles = this.getSelectedFiles();
-			let files: TAbstractFile[] = [];
-			
-			const path = navFile.getAttribute('data-path') || navFile.querySelector('.nav-file-title, .nav-folder-title')?.getAttribute('data-path');
-			const clickedFile = this.app.vault.getAbstractFileByPath(path || "");
-			
-			if (clickedFile) {
-				if (selectedFiles.length > 1 && selectedFiles.some(f => f.path === clickedFile.path)) {
-					files = selectedFiles;
-				} else {
-					files = [clickedFile];
-				}
+		const navFile = target.closest('.nav-file-title, .nav-file, .nav-folder-title, .nav-folder');
+		if (!navFile) {
+			// Alt ist gedrückt, aber kein Explorer-Item (z.B. Text im Editor).
+			// Auch hier lassen wir Obsidian machen.
+			return;
+		}
+
+		// 3. Alt ist gedrückt UND es ist ein Explorer-Item.
+		// Jetzt übernehmen wir die Kontrolle für den externen Export.
+		
+		// Wir stoppen Obsidian's eigene Handler auf dem Document, damit es nicht versucht, 
+		// die Datei intern zu verschieben/kopieren.
+		evt.stopImmediatePropagation();
+
+		const selectedFiles = this.getSelectedFiles();
+		let files: TAbstractFile[] = [];
+		
+		const path = navFile.getAttribute('data-path') || navFile.querySelector('.nav-file-title, .nav-folder-title')?.getAttribute('data-path');
+		const clickedFile = this.app.vault.getAbstractFileByPath(path || "");
+		
+		if (clickedFile) {
+			if (selectedFiles.length > 1 && selectedFiles.some(f => f.path === clickedFile.path)) {
+				files = selectedFiles;
+			} else {
+				files = [clickedFile];
+			}
+		}
+
+		if (files.length > 0) {
+			// PRO: Folder Dragging
+			const hasFolder = files.some(f => f instanceof TFolder);
+			if (hasFolder && !this.settings.isPro) {
+				new Notice(t('PRO_FEATURE_LOCKED'));
+				evt.preventDefault();
+				return;
 			}
 
-			if (files.length > 0) {
-				// PRO: Folder Dragging
-				const hasFolder = files.some(f => f instanceof TFolder);
-				if (hasFolder && !this.settings.isPro) {
-					new Notice(t('PRO_FEATURE_LOCKED'));
-					evt.preventDefault();
-					return;
-				}
+			const absolutePaths = files
+				.map(f => this.getAbsolutePath(f))
+				.filter((p): p is string => p !== null);
 
-				const absolutePaths = files
-					.map(f => this.getAbsolutePath(f))
-					.filter((p): p is string => p !== null);
-
-				if (absolutePaths.length > 0) {
-					this.startNativeDrag(evt, files, absolutePaths);
-				}
+			if (absolutePaths.length > 0) {
+				this.startNativeDrag(evt, files, absolutePaths);
 			}
 		}
 	}
@@ -353,7 +367,7 @@ export default class NaturalMove extends Plugin {
 		});
 
 		// PRO: Pandoc Exports (Submenu)
-		const mdFiles = files.filter(f => f instanceof TFile && f.extension === 'md') as TFile[];
+		const mdFiles = files.filter((f): f is TFile => f instanceof TFile && f.extension === 'md');
 		if (mdFiles.length > 0) {
 			menu.addItem((mainItem: MenuItem) => {
 				const mainTitle = t('EXPORT_SUBMENU_TITLE') + labelSuffix + (!this.settings.isPro ? ' (Pro)' : '');
@@ -372,7 +386,7 @@ export default class NaturalMove extends Plugin {
 				Object.entries(PANDOC_FORMATS).forEach(([key, format]) => {
 					exportSubmenu.addItem((formatItem: MenuItem) => {
 						formatItem
-							.setTitle(t(format.menuKey as keyof typeof en))
+							.setTitle(t(format.menuKey))
 							.setIcon(format.icon);
 
 						const formatSubmenu = (formatItem as MenuItem & { setSubmenu: () => Menu }).setSubmenu();

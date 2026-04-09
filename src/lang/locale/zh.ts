@@ -47,7 +47,7 @@ export default {
 	SETTING_BUY_PRO_NAME: "获取 pro 版本",
 	SETTING_BUY_PRO_DESC: "解锁文件夹复制、pandoc 模板和自定义参数。",
 	SETTING_BUY_PRO_BUTTON: "购买许可证",
-	LICENSE_VALID: "许可证有效！Pro 功能已解锁。",
+	LICENSE_VALID: "许可证有效！pro 功能已解锁。",
 	LICENSE_INVALID: "许可证密钥无效。",
 	PRO_FEATURE_LOCKED: "这是一个 pro 功能。请输入有效的许可证密钥。",
 	COPY_COMMAND_NAME: "复制所选文件（从文件资源管理器）",

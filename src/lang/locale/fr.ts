@@ -47,7 +47,7 @@ export default {
 	SETTING_BUY_PRO_NAME: "Obtenir la version pro",
 	SETTING_BUY_PRO_DESC: "Débloquez la copie de dossiers, les modèles pandoc et les arguments personnalisés.",
 	SETTING_BUY_PRO_BUTTON: "Acheter une licence",
-	LICENSE_VALID: "La licence est valide ! Fonctionnalités Pro débloquées.",
+	LICENSE_VALID: "La licence est valide ! Fonctionnalités pro débloquées.",
 	LICENSE_INVALID: "Clé de licence invalide.",
 	PRO_FEATURE_LOCKED: "C'est une fonctionnalité pro. Veuillez entrer une clé de licence valide.",
 	COPY_COMMAND_NAME: "Copier les fichiers sélectionnés (depuis l'explorateur de fichiers)",

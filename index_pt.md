@@ -1,12 +1,17 @@
 # Natural Move/Export
 
-[English](README.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Español](README_es.md) | [简体中文](README_zh.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Português](README_pt.md) | [Русский](README_ru.md)
+[English](index.md) | [Deutsch](index_de.md) | [Français](index_fr.md) | [Español](index_es.md) | [简体中文](index_zh.md) | [日本語](index_ja.md) | [한국어](index_ko.md) | [Português](index_pt.md) | [Русский](index_ru.md)
 
----
+<div style="max-width: 900px; margin: 40px auto; position: relative; padding-bottom: 50.625%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  <iframe 
+    src="https://www.youtube.com/embed/7rfUTl3iBh8" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
-https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
-
----
 **Natural Move/Export** é um plugin para o Obsidian que preenche perfeitamente a lacuna entre o Obsidian e o seu sistema operacional. Ele faz com que o Explorador de Arquivos do Obsidian pareça uma pasta nativa no seu computador.
 
 ## Por que o Natural Move/Export?
@@ -74,9 +79,9 @@ Abra o terminal e digite o seguinte comando:
 ```bash
 brew install --cask mactex-no-gui
 ```
-*(Nota: O download é muito grande (aprox. 5 GB), pois contém todos os pacotes LaTeX necessários. A versão `mactex-no-gui` instala apenas as ferramentas de linha de comando, o que é suficiente para o Pandoc).*
+*(Nota: O download é muito grande (aprox. 5 GB), pois contém todos os pacotes LaTeX necessários. A versão `mactex-no-gui` instala apenas as ferramentas de linha de comando, lo que é suficiente para o Pandoc).*
 
-*Opção 2: Download Manual*
+*Option 2: Download Manual*
 1. Vá ao site oficial: [tug.org/mactex](https://www.tug.org/mactex/)
 2. Baixe o arquivo `MacTeX.pkg` e execute o instalador.
 

@@ -1,12 +1,17 @@
 # Natural Move/Export
 
-[English](README.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Español](README_es.md) | [简体中文](README_zh.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Português](README_pt.md) | [Русский](README_ru.md)
+[English](index.md) | [Deutsch](index_de.md) | [Français](index_fr.md) | [Español](index_es.md) | [简体中文](index_zh.md) | [日本語](index_ja.md) | [한국어](index_ko.md) | [Português](index_pt.md) | [Русский](index_ru.md)
 
----
+<div style="max-width: 900px; margin: 40px auto; position: relative; padding-bottom: 50.625%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  <iframe 
+    src="https://www.youtube.com/embed/7rfUTl3iBh8" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
-https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
-
----
 **Natural Move/Export** es un complemento de Obsidian que cierra a la perfección la brecha entre Obsidian y su sistema operativo. Hace que el Explorador de archivos de Obsidian se sienta como una carpeta nativa en su computadora.
 
 ## ¿Por qué Natural Move/Export?
@@ -74,9 +79,9 @@ Abra la terminal e ingrese el siguiente comando:
 ```bash
 brew install --cask mactex-no-gui
 ```
-*(Nota: La descarga es muy grande (aprox. 5 GB), ya que contiene todos los paquetes de LaTeX necesarios. La versión `mactex-no-gui` solo instala las herramientas de línea de comandos, lo cual es suficiente para Pandoc).*
+*(Nota: La descarga es very large (aprox. 5 GB), ya que contiene todos los paquetes de LaTeX necesarios. La versión `mactex-no-gui` solo instala las herramientas de línea de comandos, lo cual es suficiente para Pandoc).*
 
-*Opción 2: Descarga manual*
+*Option 2: Descarga manual*
 1. Vaya al sitio web oficial: [tug.org/mactex](https://www.tug.org/mactex/)
 2. Descargue el archivo `MacTeX.pkg` y ejecute el instalador.
 
