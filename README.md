@@ -4,11 +4,9 @@
 
 ---
 
-
-
-https://github.com/user-attachments/assets/427f822a-bc7d-48dc-884b-eedf2bf3a1ef
-
-
+<video width="100%" controls>
+<source src="https://github.com/user-attachments/assets/85a2c729-5c14-4611-ba34-f93d8e496ebc" type="video/mp4">
+</video>
 
 ---
 **Natural Move/Export** is an Obsidian plugin that seamlessly bridges the gap between Obsidian and your operating system. It makes Obsidian's File Explorer feel like a native folder on your computer.
