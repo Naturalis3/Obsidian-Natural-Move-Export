@@ -4,6 +4,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
+
+---
+
 **Natural Move/Export** 是一款 Obsidian 插件，可无缝桥接 Obsidian 与您的操作系统。它让 Obsidian 的文件资源管理器感觉就像您计算机上的原生文件夹。
 
 ## 为什么选择 Natural Move/Export？
@@ -52,10 +56,6 @@ Obsidian 的文件资源管理器功能强大，但相对孤立。将文件从 O
 3. 在 **许可密钥 (License Key)** 字段中输入您的许可密钥。
 4. 单击 **验证 (Verify)**。
 5. 激活后，所有专业版功能将立即解锁。
-
-## 🎬 演示
-
-*(即将推出：插件实际运行的视频/GIF 演示)*
 
 ## 🛠️ Pandoc 导出的先决条件
 
