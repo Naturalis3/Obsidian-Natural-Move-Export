@@ -56,13 +56,6 @@ Configure a fixed target folder in the settings. Copy files and folders there wi
 4. Click **Verify**.
 5. Once activated, all Pro features will be unlocked immediately.
 
-## 🎬 Showcase
-
-*(Coming soon: Video/GIF demonstration of the plugin in action)*
-
-> [!TIP]
-> Check out the [PRESENTATION.md](PRESENTATION.md) for a storyboard on how to record your own demo video.
-
 ## 🛠️ Prerequisites for Pandoc Export
 
 To use the export functions (Word, PowerPoint, PDF, etc.), **Pandoc** must be installed on your system.
