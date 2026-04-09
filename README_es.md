@@ -4,6 +4,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/331368f7-fb1a-44b2-999c-d52296116d0e
+
+---
+
 **Natural Move/Export** es un complemento de Obsidian que cierra a la perfección la brecha entre Obsidian y su sistema operativo. Hace que el Explorador de archivos de Obsidian se sienta como una carpeta nativa en su computadora.
 
 ## ¿Por qué Natural Move/Export?
@@ -52,10 +56,6 @@ Configure una carpeta de destino fija en los ajustes. Copie archivos y carpetas 
 3. Ingrese su clave de licencia en el campo **Clave de licencia**.
 4. Haga clic en **Verificar**.
 5. Una vez activadas, todas las funciones Pro se desbloquearán de inmediato.
-
-## 🎬 Demostración
-
-*(Próximamente: demostración en video/GIF del complemento en acción)*
 
 ## 🛠️ Requisitos previos para la exportación con Pandoc
 
