@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "Copy selected files (from file explorer)",
 	PLACEHOLDER_TARGET_FOLDER: "/path/to/folder",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/path/to/templates",
+	SETTING_PANDOC_DOWNLOAD_LINK: "Download Pandoc here",
+	PANDOC_NOT_FOUND: "⚠️ Pandoc not found! Please install Pandoc or check the path in settings.",
+	SETTING_HELP_NAME: "📖 Documentation & Help",
+	SETTING_HELP_DESC: "Open the official documentation and setup guide.",
+	SETTING_HELP_BUTTON: "Open Documentation",
+	EXPORT_FALLBACK_YAML: "Exported without metadata (YAML error bypassed).",
+	LICENSE_CONNECTION_ERROR: "Connection error. Please check your internet connection.",
 };

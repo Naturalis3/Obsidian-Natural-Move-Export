@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "Copiar archivos seleccionados (desde el explorador de archivos)",
 	PLACEHOLDER_TARGET_FOLDER: "/ruta/al/carpeta",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/ruta/a/plantillas",
+	SETTING_PANDOC_DOWNLOAD_LINK: "Descargar Pandoc aquí",
+	PANDOC_NOT_FOUND: "⚠️ ¡Pandoc no encontrado! Por favor, instala Pandoc o comprueba la ruta en los ajustes.",
+	SETTING_HELP_NAME: "📖 Documentación y Ayuda",
+	SETTING_HELP_DESC: "Abre la documentación oficial y la guía de configuración.",
+	SETTING_HELP_BUTTON: "Abrir Documentación",
+	EXPORT_FALLBACK_YAML: "Exportado sin metadatos (error YAML omitido).",
+	LICENSE_CONNECTION_ERROR: "Error de conexión. Por favor, comprueba tu conexión a internet.",
 };

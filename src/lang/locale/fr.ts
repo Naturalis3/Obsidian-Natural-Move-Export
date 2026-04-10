@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "Copier les fichiers sélectionnés (depuis l'explorateur de fichiers)",
 	PLACEHOLDER_TARGET_FOLDER: "/chemin/vers/dossier",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/chemin/vers/modeles",
+	SETTING_PANDOC_DOWNLOAD_LINK: "Télécharger Pandoc ici",
+	PANDOC_NOT_FOUND: "⚠️ Pandoc introuvable ! Veuillez installer Pandoc ou vérifier le chemin dans les paramètres.",
+	SETTING_HELP_NAME: "📖 Documentation & Aide",
+	SETTING_HELP_DESC: "Ouvrir la documentation officielle et le guide d'installation.",
+	SETTING_HELP_BUTTON: "Ouvrir la documentation",
+	EXPORT_FALLBACK_YAML: "Exporté sans métadonnées (erreur YAML contournée).",
+	LICENSE_CONNECTION_ERROR: "Erreur de connexion. Veuillez vérifier votre connexion internet.",
 };

@@ -40,6 +40,10 @@ Converta suas notas Markdown em documentos polidos com um único clique.
 ### 📁 Sincronização de Pasta de Destino (Pro)
 Configure uma pasta de destino fixa nas configurações. Copie arquivos e pastas para lá com um clique através do menu de contexto. Perfeito para backups, compartilhamento ou exportações de projetos.
 
+### 🌍 Localização Inteligente e Detecção de SO
+*   **Idioma Automático:** O plugin adapta-se automaticamente às configurações de idioma do seu Obsidian.
+*   **Detecção Inteligente de SO:** As configurações e os marcadores de posição ajustam-se automaticamente dependendo se você usa Windows, macOS ou Linux.
+
 ## 💎 Grátis vs Pro
 
 | Característica | Grátis | Pro |

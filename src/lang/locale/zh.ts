@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "复制所选文件（从文件资源管理器）",
 	PLACEHOLDER_TARGET_FOLDER: "/文件夹路径",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/模板文件夹路径",
+	SETTING_PANDOC_DOWNLOAD_LINK: "在此下载 Pandoc",
+	PANDOC_NOT_FOUND: "⚠️ 未找到 Pandoc！请安装 Pandoc 或在设置中检查路径。",
+	SETTING_HELP_NAME: "📖 文档与帮助",
+	SETTING_HELP_DESC: "打开官方文档和设置指南。",
+	SETTING_HELP_BUTTON: "打开文档",
+	EXPORT_FALLBACK_YAML: "已导出，无元数据（已绕过 YAML 错误）。",
+	LICENSE_CONNECTION_ERROR: "连接错误。请检查您的互联网连接。",
 };

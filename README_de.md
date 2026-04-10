@@ -35,6 +35,10 @@ Konvertiere deine Markdown-Notizen mit einem Klick in polierte Dokumente.
 ### 📁 Zielordner-Synchronisation (Pro)
 Konfiguriere einen festen Zielordner in den Einstellungen. Kopiere Dateien und Ordner mit einem Klick über das Kontextmenü dorthin. Perfekt für Backups, Freigaben oder Projektexporte.
 
+### 🌍 Smarte Lokalisierung & OS-Erkennung
+*   **Automatische Sprache:** Das Plugin passt sich automatisch an die Spracheinstellung von Obsidian an.
+*   **Smarte OS-Erkennung:** Einstellungen und Platzhalter passen sich automatisch an, je nachdem, ob du Windows, macOS oder Linux nutzt.
+
 ## 💎 Free vs. Pro
 
 | Funktion | Free | Pro |

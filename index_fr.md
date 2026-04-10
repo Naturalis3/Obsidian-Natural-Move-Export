@@ -40,6 +40,10 @@ Convertissez vos notes Markdown en documents soignés d'un seul clic.
 ### 📁 Synchronisation du dossier cible (Pro)
 Configurez un dossier cible fixe dans les paramètres. Copiez-y des fichiers et des dossiers en un clic via le menu contextuel. Parfait pour les sauvegardes, le partage ou les exportations de projets.
 
+### 🌍 Localisation Intelligente & Détection d'OS
+*   **Langue Automatique :** Le plugin s'adapte automatiquement aux paramètres de langue de votre Obsidian.
+*   **Détection d'OS Intelligente :** Les paramètres et les espaces réservés s'ajustent automatiquement selon que vous utilisez Windows, macOS ou Linux.
+
 ## 💎 Gratuit vs Pro
 
 | Caractéristique | Gratuit | Pro |

@@ -22,9 +22,9 @@ const localeMap: { [k: string]: Partial<typeof en> } = {
 	ru,
 };
 
-const locale = localeMap[window.localStorage.getItem('language') || 'en'] || en;
-
 export function t(str: keyof typeof en, ...args: string[]): string {
+	const currentLang = window.localStorage.getItem('language') || 'en';
+	const locale = localeMap[currentLang] || en;
 	let text = locale[str] || en[str] || str;
 	
 	if (args && args.length > 0) {

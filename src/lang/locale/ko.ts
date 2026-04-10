@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "선택한 파일 복사 (파일 탐색기에서)",
 	PLACEHOLDER_TARGET_FOLDER: "/폴더/경로",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/템플릿/경로",
+	SETTING_PANDOC_DOWNLOAD_LINK: "여기서 Pandoc 다운로드",
+	PANDOC_NOT_FOUND: "⚠️ Pandoc을 찾을 수 없습니다! Pandoc을 설치하거나 설정에서 경로를 확인하세요.",
+	SETTING_HELP_NAME: "📖 문서 및 도움말",
+	SETTING_HELP_DESC: "공식 문서 및 설정 가이드를 엽니다.",
+	SETTING_HELP_BUTTON: "문서 열기",
+	EXPORT_FALLBACK_YAML: "메타데이터 없이 내보냈습니다 (YAML 오류 우회).",
+	LICENSE_CONNECTION_ERROR: "연결 오류. 인터넷 연결을 확인해 주세요.",
 };

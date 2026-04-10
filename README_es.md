@@ -35,6 +35,10 @@ Convierta sus notas de Markdown en documentos pulidos con un solo clic.
 ### 📁 Sincronización de carpeta de destino (Pro)
 Configure una carpeta de destino fija en los ajustes. Copie archivos y carpetas allí con un clic a través del menú contextual. Perfecto para copias de seguridad, intercambio o exportaciones de proyectos.
 
+### 🌍 Localización Inteligente y Detección de SO
+*   **Idioma Automático:** El plugin se adapta automáticamente a la configuración de idioma de tu Obsidian.
+*   **Detección Inteligente de SO:** Los ajustes y marcadores de posición se adaptan automáticamente dependiendo de si usas Windows, macOS o Linux.
+
 ## 💎 Gratis vs. Pro
 
 | Característica | Gratis | Pro |

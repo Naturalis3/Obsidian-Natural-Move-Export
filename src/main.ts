@@ -597,6 +597,7 @@ pb's writeObjects:fileArray
 			PATH: `${process.env.PATH || ''}:/usr/local/bin:/opt/homebrew/bin:/Library/TeX/texbin:/usr/bin:/bin:/usr/sbin:/sbin`
 		};
 
+		let pandocMissing = false;
 		for (const file of files) {
 			const sourcePath = this.getAbsolutePath(file);
 			if (!sourcePath) {
@@ -640,10 +641,42 @@ pb's writeObjects:fileArray
 					});
 				});
 				successCount++;
-			} catch (err) {
+			} catch (err: any) {
 				console.error(`Fehler beim Export von ${file.name}:`, err);
-				errorCount++;
+				
+				const errorStr = (err?.message || '') + ' ' + (lastError || '');
+				if (errorStr.toLowerCase().includes('yaml') || errorStr.toLowerCase().includes('metadata')) {
+					console.log('YAML error detected, trying fallback without metadata...');
+					const fallbackCmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -f markdown-yaml_metadata_block -o "${destPath}"`;
+					try {
+						await new Promise<void>((resolve, reject) => {
+							exec(fallbackCmd, { env }, (error, stdout, stderr) => {
+								if (error) {
+									lastError = stderr || error.message;
+									reject(error);
+								} else {
+									resolve();
+								}
+							});
+						});
+						successCount++;
+						new Notice(t('EXPORT_FALLBACK_YAML') + ` (${file.name})`);
+					} catch (fallbackErr: any) {
+						console.error(`Fallback-Fehler beim Export von ${file.name}:`, fallbackErr);
+						errorCount++;
+					}
+				} else if (err && (err.code === 'ENOENT' || (err.message && err.message.includes('command not found')) || (err.message && err.message.includes('nicht gefunden')))) {
+					pandocMissing = true;
+					break;
+				} else {
+					errorCount++;
+				}
 			}
+		}
+
+		if (pandocMissing) {
+			new Notice(t('PANDOC_NOT_FOUND'));
+			return;
 		}
 
 		if (successCount > 0) {
@@ -787,7 +820,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 								new Notice(t('LICENSE_INVALID') + (status.message ? `: ${status.message}` : ''));
 							} else {
 								// Verbindungsfehler: Wir lassen den Status wie er ist, informieren aber den User
-								new Notice(status.message || "Connection error");
+								new Notice(status.message || t('LICENSE_CONNECTION_ERROR'));
 							}
 						}
 						
@@ -801,12 +834,17 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 
 		containerEl.createEl('hr');
 
+		const isWin = os.platform() === 'win32';
+		const targetFolderPlaceholder = isWin ? 'C:\\path\\to\\folder' : '/path/to/folder';
+		const pandocPlaceholder = isWin ? 'C:\\Program Files\\Pandoc\\pandoc.exe' : '/usr/local/bin/pandoc';
+		const templatesFolderPlaceholder = isWin ? 'C:\\path\\to\\templates' : '/path/to/templates';
+
 		new Setting(containerEl)
 			.setName(t('SETTING_TARGET_FOLDER_NAME') + (!this.plugin.settings.isPro ? ' (Pro)' : ''))
 			.setDesc(t('SETTING_TARGET_FOLDER_DESC'))
 			.addText(text => {
 				text
-					.setPlaceholder(t('PLACEHOLDER_TARGET_FOLDER'))
+					.setPlaceholder(targetFolderPlaceholder)
 					.setValue(this.plugin.settings.targetFolderPath)
 					.onChange(async (value) => {
 						this.plugin.settings.targetFolderPath = value.trim();
@@ -820,12 +858,19 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				return text;
 			});
 
+		const pandocDesc = document.createDocumentFragment();
+		pandocDesc.appendText(t('SETTING_PANDOC_PATH_DESC') + ' ');
+		pandocDesc.createEl('a', { 
+			text: t('SETTING_PANDOC_DOWNLOAD_LINK'), 
+			href: 'https://pandoc.org/installing.html' 
+		});
+
 		new Setting(containerEl)
 			.setName(t('SETTING_PANDOC_PATH_NAME') + (!this.plugin.settings.isPro ? ' (Pro)' : ''))
-			.setDesc(t('SETTING_PANDOC_PATH_DESC'))
+			.setDesc(pandocDesc)
 			.addText(text => {
 				text
-					.setPlaceholder('Pandoc')
+					.setPlaceholder(pandocPlaceholder)
 					.setValue(this.plugin.settings.pandocPath)
 					.onChange(async (value) => {
 						this.plugin.settings.pandocPath = value.trim();
@@ -865,7 +910,7 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.setDesc(t('SETTING_WORD_TEMPLATES_FOLDER_DESC'))
 			.addText(text => {
 				text
-					.setPlaceholder(t('PLACEHOLDER_TEMPLATES_FOLDER'))
+					.setPlaceholder(templatesFolderPlaceholder)
 					.setValue(this.plugin.settings.wordTemplatesFolderPath)
 					.onChange(async (value) => {
 						this.plugin.settings.wordTemplatesFolderPath = value.trim();
@@ -896,6 +941,17 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				.setButtonText(t('SETTING_TEST_SOUND_BUTTON'))
 				.onClick(() => {
 					this.plugin.playSuccessSound();
+				}));
+
+		containerEl.createEl('hr');
+
+		new Setting(containerEl)
+			.setName(t('SETTING_HELP_NAME'))
+			.setDesc(t('SETTING_HELP_DESC'))
+			.addButton(btn => btn
+				.setButtonText(t('SETTING_HELP_BUTTON'))
+				.onClick(() => {
+					window.open("https://github.com/Naturalis3/Obsidian-Natural-Move-Export/blob/main/README.md");
 				}));
 	}
 }

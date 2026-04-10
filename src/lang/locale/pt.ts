@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "Copiar arquivos selecionados (do explorador de arquivos)",
 	PLACEHOLDER_TARGET_FOLDER: "/caminho/para/pasta",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/caminho/para/modelos",
+	SETTING_PANDOC_DOWNLOAD_LINK: "Baixar Pandoc aqui",
+	PANDOC_NOT_FOUND: "⚠️ Pandoc não encontrado! Por favor, instale o Pandoc ou verifique o caminho nas configurações.",
+	SETTING_HELP_NAME: "📖 Documentação e Ajuda",
+	SETTING_HELP_DESC: "Abra a documentação oficial e o guia de configuração.",
+	SETTING_HELP_BUTTON: "Abrir Documentação",
+	EXPORT_FALLBACK_YAML: "Exportado sem metadados (erro YAML ignorado).",
+	LICENSE_CONNECTION_ERROR: "Erro de conexão. Por favor, verifique sua conexão com a internet.",
 };

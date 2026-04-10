@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "Копировать выбранные файлы (из проводника)",
 	PLACEHOLDER_TARGET_FOLDER: "/путь/к/папке",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/путь/к/шаблонам",
+	SETTING_PANDOC_DOWNLOAD_LINK: "Скачать Pandoc здесь",
+	PANDOC_NOT_FOUND: "⚠️ Pandoc не найден! Пожалуйста, установите Pandoc или проверьте путь в настройках.",
+	SETTING_HELP_NAME: "📖 Документация и помощь",
+	SETTING_HELP_DESC: "Открыть официальную документацию и руководство по установке.",
+	SETTING_HELP_BUTTON: "Открыть документацию",
+	EXPORT_FALLBACK_YAML: "Экспортировано без метаданных (ошибка YAML обойдена).",
+	LICENSE_CONNECTION_ERROR: "Ошибка подключения. Пожалуйста, проверьте подключение к интернету.",
 };

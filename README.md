@@ -35,6 +35,10 @@ Convert your Markdown notes into polished documents with a single click.
 ### 📁 Target Folder Sync (Pro)
 Configure a fixed target folder in the settings. Copy files and folders there with one click via the context menu. Perfect for backups, sharing, or project exports.
 
+### 🌍 Smart Localization & OS Detection
+*   **Automatic Language:** The plugin automatically adapts to your Obsidian language settings.
+*   **Smart OS Detection:** Settings and placeholders automatically adjust depending on whether you are using Windows, macOS, or Linux.
+
 ## 💎 Free vs. Pro
 
 | Feature | Free | Pro |

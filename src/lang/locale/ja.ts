@@ -53,4 +53,11 @@ export default {
 	COPY_COMMAND_NAME: "選択したファイルをコピー (ファイルエクスプローラーから)",
 	PLACEHOLDER_TARGET_FOLDER: "/フォルダへのパス",
 	PLACEHOLDER_TEMPLATES_FOLDER: "/テンプレートへのパス",
+	SETTING_PANDOC_DOWNLOAD_LINK: "ここでPandocをダウンロード",
+	PANDOC_NOT_FOUND: "⚠️ Pandocが見つかりません！Pandocをインストールするか、設定でパスを確認してください。",
+	SETTING_HELP_NAME: "📖 ドキュメントとヘルプ",
+	SETTING_HELP_DESC: "公式ドキュメントとセットアップガイドを開きます。",
+	SETTING_HELP_BUTTON: "ドキュメントを開く",
+	EXPORT_FALLBACK_YAML: "メタデータなしでエクスポートされました（YAMLエラーを回避）。",
+	LICENSE_CONNECTION_ERROR: "接続エラー。インターネット接続を確認してください。",
 };
