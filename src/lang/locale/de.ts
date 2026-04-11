@@ -58,6 +58,7 @@ export default {
 	SETTING_HELP_NAME: "📖 Dokumentation & Hilfe",
 	SETTING_HELP_DESC: "Öffne die offizielle Dokumentation und Installationsanleitung.",
 	SETTING_HELP_BUTTON: "Dokumentation öffnen",
+	SETTING_HELP_BUG_BUTTON: "Fehler melden",
 	EXPORT_FALLBACK_YAML: "Exportiert ohne Metadaten (YAML-Fehler umgangen).",
 	LICENSE_CONNECTION_ERROR: "Verbindungsfehler. Bitte überprüfe deine Internetverbindung.",
 };

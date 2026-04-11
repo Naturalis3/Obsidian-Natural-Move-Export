@@ -573,6 +573,105 @@ pb's writeObjects:fileArray
 		}
 	}
 
+	private async createVideoThumbnail(videoFile: TFile, tempDir: string): Promise<string> {
+		return new Promise((resolve, reject) => {
+			const video = document.createElement('video');
+			video.style.display = 'none';
+			video.muted = true;
+			video.src = this.app.vault.getResourcePath(videoFile);
+			video.crossOrigin = "anonymous";
+
+			video.onloadedmetadata = () => {
+				video.currentTime = Math.min(1, video.duration / 2);
+			};
+
+			video.onseeked = async () => {
+				try {
+					const canvas = document.createElement('canvas');
+					canvas.width = video.videoWidth || 640;
+					canvas.height = video.videoHeight || 360;
+					const ctx = canvas.getContext('2d');
+					if (ctx) {
+						ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+						
+						// Draw Play Button Overlay
+						ctx.fillStyle = "rgba(0,0,0,0.5)";
+						ctx.beginPath();
+						ctx.arc(canvas.width/2, canvas.height/2, 40, 0, Math.PI*2);
+						ctx.fill();
+						ctx.fillStyle = "white";
+						ctx.beginPath();
+						ctx.moveTo(canvas.width/2 - 12, canvas.height/2 - 20);
+						ctx.lineTo(canvas.width/2 + 20, canvas.height/2);
+						ctx.lineTo(canvas.width/2 - 12, canvas.height/2 + 20);
+						ctx.fill();
+
+						const dataUrl = canvas.toDataURL('image/png');
+						const base64Data = dataUrl.replace(/^data:image\/png;base64,/, "");
+						const thumbPath = path.join(tempDir, `thumb_${videoFile.name}.png`);
+						fs.writeFileSync(thumbPath, base64Data, 'base64');
+						resolve(thumbPath);
+					} else {
+						reject(new Error("Canvas context is null"));
+					}
+				} catch (e) {
+					reject(e);
+				} finally {
+					video.remove();
+				}
+			};
+
+			video.onerror = (e) => {
+				video.remove();
+				reject(e);
+			};
+		});
+	}
+
+	private async processMarkdownForExport(file: TFile, tempDir: string): Promise<string> {
+		let content = await this.app.vault.read(file);
+		
+		// Match Obsidian embeds: ![[filename.ext]] or ![[filename.ext|alt]]
+		const embedRegex = /!\[\[(.*?)\]\]/g;
+		const matches = [...content.matchAll(embedRegex)];
+
+		for (const match of matches) {
+			const fullMatch = match[0];
+			const linkContent = match[1];
+			const [linkPath, ...altParts] = linkContent.split('|');
+			const altText = altParts.join('|') || '';
+
+			const linkedFile = this.app.metadataCache.getFirstLinkpathDest(linkPath, file.path);
+			if (linkedFile instanceof TFile) {
+				const absolutePath = this.getAbsolutePath(linkedFile);
+				if (!absolutePath) continue;
+				
+				const extension = linkedFile.extension.toLowerCase();
+				const safePath = absolutePath.replace(/\\/g, '/');
+
+				if (['png', 'jpg', 'jpeg', 'gif', 'bmp', 'svg', 'webp'].includes(extension)) {
+					// Replace with absolute image link
+					content = content.replace(fullMatch, `![${altText}](file:///${safePath})`);
+				} else if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
+					// Video
+					try {
+						const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
+						const safeThumbPath = thumbPath.replace(/\\/g, '/');
+						content = content.replace(fullMatch, `[![${altText}](file:///${safeThumbPath})](file:///${safePath})`);
+					} catch (e) {
+						console.error("Failed to generate thumbnail for", linkedFile.name, e);
+						// Fallback to text link
+						content = content.replace(fullMatch, `[🎥 ${linkedFile.name}](file:///${safePath})`);
+					}
+				}
+			}
+		}
+
+		const tempMdPath = path.join(tempDir, `temp_${file.name}`);
+		fs.writeFileSync(tempMdPath, content, 'utf8');
+		return tempMdPath;
+	}
+
 	private async exportWithPandoc(files: TFile[], format: PandocFormat, templatePath?: string) {
 		if (!this.settings.isPro) {
 			new Notice(t('PRO_FEATURE_LOCKED'));
@@ -598,35 +697,55 @@ pb's writeObjects:fileArray
 		};
 
 		let pandocMissing = false;
-		for (const file of files) {
-			const sourcePath = this.getAbsolutePath(file);
-			if (!sourcePath) {
-				errorCount++;
-				continue;
-			}
+		
+		// Create a temporary directory for pre-processing
+		const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'natural-move-'));
 
-			let destName = file.basename + '.' + format.ext;
-			// Verhindere Überschreiben der Quelldatei, falls Zielordner = Vault-Ordner
-			if (format.ext === 'md' && sourcePath === path.join(this.settings.targetFolderPath, destName)) {
-				destName = file.basename + '_export.' + format.ext;
-			}
-			
-			const destPath = path.join(this.settings.targetFolderPath, destName);
-
-			// Pandoc Befehl zusammenbauen
-			let customArgs = (this.settings.isPro && this.settings.customPandocArgs) ? ` ${this.settings.customPandocArgs}` : '';
-			
-			// Pro Feature: Templates
-			if (this.settings.isPro && templatePath && fs.existsSync(templatePath)) {
-				const ext = path.extname(templatePath).toLowerCase();
-				if (ext === '.docx' || ext === '.pptx') {
-					customArgs += ` --reference-doc="${templatePath}"`;
-				} else {
-					customArgs += ` --template="${templatePath}"`;
+		try {
+			for (const file of files) {
+				const originalSourcePath = this.getAbsolutePath(file);
+				if (!originalSourcePath) {
+					errorCount++;
+					continue;
 				}
-			}
 
-			const cmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -o "${destPath}"`;
+				// Pre-process markdown to handle images and videos
+				let sourcePath = originalSourcePath;
+				if (file.extension === 'md') {
+					try {
+						sourcePath = await this.processMarkdownForExport(file, tempDir);
+					} catch (e) {
+						console.error("Pre-processing failed for", file.name, e);
+						// Fallback to original source path if pre-processing fails
+					}
+				}
+
+				let destName = file.basename + '.' + format.ext;
+				// Verhindere Überschreiben der Quelldatei, falls Zielordner = Vault-Ordner
+				if (format.ext === 'md' && originalSourcePath === path.join(this.settings.targetFolderPath, destName)) {
+					destName = file.basename + '_export.' + format.ext;
+				}
+				
+				const destPath = path.join(this.settings.targetFolderPath, destName);
+
+				// Pandoc Befehl zusammenbauen
+				let customArgs = (this.settings.isPro && this.settings.customPandocArgs) ? ` ${this.settings.customPandocArgs}` : '';
+				
+				// Pro Feature: Templates
+				if (this.settings.isPro && templatePath && fs.existsSync(templatePath)) {
+					const ext = path.extname(templatePath).toLowerCase();
+					if (ext === '.docx' || ext === '.pptx') {
+						customArgs += ` --reference-doc="${templatePath}"`;
+					} else {
+						customArgs += ` --template="${templatePath}"`;
+					}
+				}
+
+				// Add resource path so Pandoc can find relative files if any are left
+				const originalDir = path.dirname(originalSourcePath);
+				customArgs += ` --resource-path="${originalDir}"`;
+
+				const cmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -o "${destPath}"`;
 
 			try {
 				await new Promise<void>((resolve, reject) => {
@@ -641,12 +760,14 @@ pb's writeObjects:fileArray
 					});
 				});
 				successCount++;
-			} catch (err: any) {
+			} catch (err: unknown) {
 				console.error(`Fehler beim Export von ${file.name}:`, err);
 				
-				const errorStr = (err?.message || '') + ' ' + (lastError || '');
+				const errorMessage = err instanceof Error ? err.message : String(err);
+				const errorCode = err && typeof err === 'object' && 'code' in err ? String((err as Record<string, unknown>).code) : '';
+				const errorStr = errorMessage + ' ' + (lastError || '');
 				if (errorStr.toLowerCase().includes('yaml') || errorStr.toLowerCase().includes('metadata')) {
-					console.log('YAML error detected, trying fallback without metadata...');
+					console.debug('YAML error detected, trying fallback without metadata...');
 					const fallbackCmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -f markdown-yaml_metadata_block -o "${destPath}"`;
 					try {
 						await new Promise<void>((resolve, reject) => {
@@ -661,16 +782,24 @@ pb's writeObjects:fileArray
 						});
 						successCount++;
 						new Notice(t('EXPORT_FALLBACK_YAML') + ` (${file.name})`);
-					} catch (fallbackErr: any) {
+					} catch (fallbackErr: unknown) {
 						console.error(`Fallback-Fehler beim Export von ${file.name}:`, fallbackErr);
 						errorCount++;
 					}
-				} else if (err && (err.code === 'ENOENT' || (err.message && err.message.includes('command not found')) || (err.message && err.message.includes('nicht gefunden')))) {
+				} else if (errorCode === 'ENOENT' || errorMessage.includes('command not found') || errorMessage.includes('nicht gefunden')) {
 					pandocMissing = true;
 					break;
 				} else {
 					errorCount++;
 				}
+			}
+		}
+		} finally {
+			// Clean up temporary directory
+			try {
+				fs.rmSync(tempDir, { recursive: true, force: true });
+			} catch (e) {
+				console.error("Failed to clean up temporary directory", e);
 			}
 		}
 
@@ -951,7 +1080,12 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 			.addButton(btn => btn
 				.setButtonText(t('SETTING_HELP_BUTTON'))
 				.onClick(() => {
-					window.open("https://github.com/Naturalis3/Obsidian-Natural-Move-Export/blob/main/README.md");
+					window.open("https://naturalis3.github.io/Obsidian-Natural-Move-Export/");
+				}))
+			.addButton(btn => btn
+				.setButtonText(t('SETTING_HELP_BUG_BUTTON'))
+				.onClick(() => {
+					window.open("https://github.com/Naturalis3/Obsidian-Natural-Move-Export/issues");
 				}));
 	}
 }

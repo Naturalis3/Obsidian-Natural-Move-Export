@@ -58,6 +58,7 @@ export default {
 	SETTING_HELP_NAME: "📖 文档与帮助",
 	SETTING_HELP_DESC: "打开官方文档和设置指南。",
 	SETTING_HELP_BUTTON: "打开文档",
+	SETTING_HELP_BUG_BUTTON: "报告错误",
 	EXPORT_FALLBACK_YAML: "已导出，无元数据（已绕过 YAML 错误）。",
 	LICENSE_CONNECTION_ERROR: "连接错误。请检查您的互联网连接。",
 };

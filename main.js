@@ -100,12 +100,14 @@ var en_default = {
   COPY_COMMAND_NAME: "Copy selected files (from file explorer)",
   PLACEHOLDER_TARGET_FOLDER: "/path/to/folder",
   PLACEHOLDER_TEMPLATES_FOLDER: "/path/to/templates",
-  SETTING_PANDOC_DOWNLOAD_LINK: "Download Pandoc here",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc not found! Please install Pandoc or check the path in settings.",
-  SETTING_HELP_NAME: "\u{1F4D6} Documentation & Help",
+  SETTING_PANDOC_DOWNLOAD_LINK: "Download pandoc here",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc not found! Please install pandoc or check the path in settings.",
+  SETTING_HELP_NAME: "\u{1F4D6} Documentation & help",
   SETTING_HELP_DESC: "Open the official documentation and setup guide.",
-  SETTING_HELP_BUTTON: "Open Documentation",
-  EXPORT_FALLBACK_YAML: "Exported without metadata (YAML error bypassed)."
+  SETTING_HELP_BUTTON: "Open documentation",
+  SETTING_HELP_BUG_BUTTON: "Report bug",
+  EXPORT_FALLBACK_YAML: "Exported without metadata (YAML error bypassed).",
+  LICENSE_CONNECTION_ERROR: "Connection error. Please check your internet connection."
 };
 
 // src/lang/locale/de.ts
@@ -169,7 +171,9 @@ var de_default = {
   SETTING_HELP_NAME: "\u{1F4D6} Dokumentation & Hilfe",
   SETTING_HELP_DESC: "\xD6ffne die offizielle Dokumentation und Installationsanleitung.",
   SETTING_HELP_BUTTON: "Dokumentation \xF6ffnen",
-  EXPORT_FALLBACK_YAML: "Exportiert ohne Metadaten (YAML-Fehler umgangen)."
+  SETTING_HELP_BUG_BUTTON: "Fehler melden",
+  EXPORT_FALLBACK_YAML: "Exportiert ohne Metadaten (YAML-Fehler umgangen).",
+  LICENSE_CONNECTION_ERROR: "Verbindungsfehler. Bitte \xFCberpr\xFCfe deine Internetverbindung."
 };
 
 // src/lang/locale/fr.ts
@@ -233,7 +237,9 @@ var fr_default = {
   SETTING_HELP_NAME: "\u{1F4D6} Documentation & Aide",
   SETTING_HELP_DESC: "Ouvrir la documentation officielle et le guide d'installation.",
   SETTING_HELP_BUTTON: "Ouvrir la documentation",
-  EXPORT_FALLBACK_YAML: "Export\xE9 sans m\xE9tadonn\xE9es (erreur YAML contourn\xE9e)."
+  SETTING_HELP_BUG_BUTTON: "Signaler un bug",
+  EXPORT_FALLBACK_YAML: "Export\xE9 sans m\xE9tadonn\xE9es (erreur YAML contourn\xE9e).",
+  LICENSE_CONNECTION_ERROR: "Erreur de connexion. Veuillez v\xE9rifier votre connexion internet."
 };
 
 // src/lang/locale/es.ts
@@ -297,7 +303,9 @@ var es_default = {
   SETTING_HELP_NAME: "\u{1F4D6} Documentaci\xF3n y Ayuda",
   SETTING_HELP_DESC: "Abre la documentaci\xF3n oficial y la gu\xEDa de configuraci\xF3n.",
   SETTING_HELP_BUTTON: "Abrir Documentaci\xF3n",
-  EXPORT_FALLBACK_YAML: "Exportado sin metadatos (error YAML omitido)."
+  SETTING_HELP_BUG_BUTTON: "Reportar error",
+  EXPORT_FALLBACK_YAML: "Exportado sin metadatos (error YAML omitido).",
+  LICENSE_CONNECTION_ERROR: "Error de conexi\xF3n. Por favor, comprueba tu conexi\xF3n a internet."
 };
 
 // src/lang/locale/zh.ts
@@ -361,7 +369,9 @@ var zh_default = {
   SETTING_HELP_NAME: "\u{1F4D6} \u6587\u6863\u4E0E\u5E2E\u52A9",
   SETTING_HELP_DESC: "\u6253\u5F00\u5B98\u65B9\u6587\u6863\u548C\u8BBE\u7F6E\u6307\u5357\u3002",
   SETTING_HELP_BUTTON: "\u6253\u5F00\u6587\u6863",
-  EXPORT_FALLBACK_YAML: "\u5DF2\u5BFC\u51FA\uFF0C\u65E0\u5143\u6570\u636E\uFF08\u5DF2\u7ED5\u8FC7 YAML \u9519\u8BEF\uFF09\u3002"
+  SETTING_HELP_BUG_BUTTON: "\u62A5\u544A\u9519\u8BEF",
+  EXPORT_FALLBACK_YAML: "\u5DF2\u5BFC\u51FA\uFF0C\u65E0\u5143\u6570\u636E\uFF08\u5DF2\u7ED5\u8FC7 YAML \u9519\u8BEF\uFF09\u3002",
+  LICENSE_CONNECTION_ERROR: "\u8FDE\u63A5\u9519\u8BEF\u3002\u8BF7\u68C0\u67E5\u60A8\u7684\u4E92\u8054\u7F51\u8FDE\u63A5\u3002"
 };
 
 // src/lang/locale/ja.ts
@@ -425,7 +435,9 @@ var ja_default = {
   SETTING_HELP_NAME: "\u{1F4D6} \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30D8\u30EB\u30D7",
   SETTING_HELP_DESC: "\u516C\u5F0F\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u30AC\u30A4\u30C9\u3092\u958B\u304D\u307E\u3059\u3002",
   SETTING_HELP_BUTTON: "\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3092\u958B\u304F",
-  EXPORT_FALLBACK_YAML: "\u30E1\u30BF\u30C7\u30FC\u30BF\u306A\u3057\u3067\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u3055\u308C\u307E\u3057\u305F\uFF08YAML\u30A8\u30E9\u30FC\u3092\u56DE\u907F\uFF09\u3002"
+  SETTING_HELP_BUG_BUTTON: "\u30D0\u30B0\u3092\u5831\u544A",
+  EXPORT_FALLBACK_YAML: "\u30E1\u30BF\u30C7\u30FC\u30BF\u306A\u3057\u3067\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u3055\u308C\u307E\u3057\u305F\uFF08YAML\u30A8\u30E9\u30FC\u3092\u56DE\u907F\uFF09\u3002",
+  LICENSE_CONNECTION_ERROR: "\u63A5\u7D9A\u30A8\u30E9\u30FC\u3002\u30A4\u30F3\u30BF\u30FC\u30CD\u30C3\u30C8\u63A5\u7D9A\u3092\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
 };
 
 // src/lang/locale/ko.ts
@@ -489,7 +501,9 @@ var ko_default = {
   SETTING_HELP_NAME: "\u{1F4D6} \uBB38\uC11C \uBC0F \uB3C4\uC6C0\uB9D0",
   SETTING_HELP_DESC: "\uACF5\uC2DD \uBB38\uC11C \uBC0F \uC124\uC815 \uAC00\uC774\uB4DC\uB97C \uC5FD\uB2C8\uB2E4.",
   SETTING_HELP_BUTTON: "\uBB38\uC11C \uC5F4\uAE30",
-  EXPORT_FALLBACK_YAML: "\uBA54\uD0C0\uB370\uC774\uD130 \uC5C6\uC774 \uB0B4\uBCF4\uB0C8\uC2B5\uB2C8\uB2E4 (YAML \uC624\uB958 \uC6B0\uD68C)."
+  SETTING_HELP_BUG_BUTTON: "\uBC84\uADF8 \uC2E0\uACE0",
+  EXPORT_FALLBACK_YAML: "\uBA54\uD0C0\uB370\uC774\uD130 \uC5C6\uC774 \uB0B4\uBCF4\uB0C8\uC2B5\uB2C8\uB2E4 (YAML \uC624\uB958 \uC6B0\uD68C).",
+  LICENSE_CONNECTION_ERROR: "\uC5F0\uACB0 \uC624\uB958. \uC778\uD130\uB137 \uC5F0\uACB0\uC744 \uD655\uC778\uD574 \uC8FC\uC138\uC694."
 };
 
 // src/lang/locale/pt.ts
@@ -553,7 +567,9 @@ var pt_default = {
   SETTING_HELP_NAME: "\u{1F4D6} Documenta\xE7\xE3o e Ajuda",
   SETTING_HELP_DESC: "Abra a documenta\xE7\xE3o oficial e o guia de configura\xE7\xE3o.",
   SETTING_HELP_BUTTON: "Abrir Documenta\xE7\xE3o",
-  EXPORT_FALLBACK_YAML: "Exportado sem metadados (erro YAML ignorado)."
+  SETTING_HELP_BUG_BUTTON: "Relatar erro",
+  EXPORT_FALLBACK_YAML: "Exportado sem metadados (erro YAML ignorado).",
+  LICENSE_CONNECTION_ERROR: "Erro de conex\xE3o. Por favor, verifique sua conex\xE3o com a internet."
 };
 
 // src/lang/locale/ru.ts
@@ -617,7 +633,9 @@ var ru_default = {
   SETTING_HELP_NAME: "\u{1F4D6} \u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u0438 \u043F\u043E\u043C\u043E\u0449\u044C",
   SETTING_HELP_DESC: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E \u0438 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E \u043F\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0435.",
   SETTING_HELP_BUTTON: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E",
-  EXPORT_FALLBACK_YAML: "\u042D\u043A\u0441\u043F\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0431\u0435\u0437 \u043C\u0435\u0442\u0430\u0434\u0430\u043D\u043D\u044B\u0445 (\u043E\u0448\u0438\u0431\u043A\u0430 YAML \u043E\u0431\u043E\u0439\u0434\u0435\u043D\u0430)."
+  SETTING_HELP_BUG_BUTTON: "\u0421\u043E\u043E\u0431\u0449\u0438\u0442\u044C \u043E\u0431 \u043E\u0448\u0438\u0431\u043A\u0435",
+  EXPORT_FALLBACK_YAML: "\u042D\u043A\u0441\u043F\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0431\u0435\u0437 \u043C\u0435\u0442\u0430\u0434\u0430\u043D\u043D\u044B\u0445 (\u043E\u0448\u0438\u0431\u043A\u0430 YAML \u043E\u0431\u043E\u0439\u0434\u0435\u043D\u0430).",
+  LICENSE_CONNECTION_ERROR: "\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043A \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0443."
 };
 
 // src/lang/helpers.ts
@@ -1107,6 +1125,87 @@ pb's writeObjects:fileArray
       new import_obsidian2.Notice(t("TARGET_FOLDER_ERROR", errorCount.toString()));
     }
   }
+  async createVideoThumbnail(videoFile, tempDir) {
+    return new Promise((resolve, reject) => {
+      const video = document.createElement("video");
+      video.style.display = "none";
+      video.muted = true;
+      video.src = this.app.vault.getResourcePath(videoFile);
+      video.crossOrigin = "anonymous";
+      video.onloadedmetadata = () => {
+        video.currentTime = Math.min(1, video.duration / 2);
+      };
+      video.onseeked = async () => {
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = video.videoWidth || 640;
+          canvas.height = video.videoHeight || 360;
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(0,0,0,0.5)";
+            ctx.beginPath();
+            ctx.arc(canvas.width / 2, canvas.height / 2, 40, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = "white";
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2 - 12, canvas.height / 2 - 20);
+            ctx.lineTo(canvas.width / 2 + 20, canvas.height / 2);
+            ctx.lineTo(canvas.width / 2 - 12, canvas.height / 2 + 20);
+            ctx.fill();
+            const dataUrl = canvas.toDataURL("image/png");
+            const base64Data = dataUrl.replace(/^data:image\/png;base64,/, "");
+            const thumbPath = path.join(tempDir, `thumb_${videoFile.name}.png`);
+            fs.writeFileSync(thumbPath, base64Data, "base64");
+            resolve(thumbPath);
+          } else {
+            reject(new Error("Canvas context is null"));
+          }
+        } catch (e) {
+          reject(e);
+        } finally {
+          video.remove();
+        }
+      };
+      video.onerror = (e) => {
+        video.remove();
+        reject(e);
+      };
+    });
+  }
+  async processMarkdownForExport(file, tempDir) {
+    let content = await this.app.vault.read(file);
+    const embedRegex = /!\[\[(.*?)\]\]/g;
+    const matches = [...content.matchAll(embedRegex)];
+    for (const match of matches) {
+      const fullMatch = match[0];
+      const linkContent = match[1];
+      const [linkPath, ...altParts] = linkContent.split("|");
+      const altText = altParts.join("|") || "";
+      const linkedFile = this.app.metadataCache.getFirstLinkpathDest(linkPath, file.path);
+      if (linkedFile instanceof import_obsidian2.TFile) {
+        const absolutePath = this.getAbsolutePath(linkedFile);
+        if (!absolutePath) continue;
+        const extension = linkedFile.extension.toLowerCase();
+        const safePath = absolutePath.replace(/\\/g, "/");
+        if (["png", "jpg", "jpeg", "gif", "bmp", "svg", "webp"].includes(extension)) {
+          content = content.replace(fullMatch, `![${altText}](file:///${safePath})`);
+        } else if (["mp4", "webm", "ogg", "mov"].includes(extension)) {
+          try {
+            const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
+            const safeThumbPath = thumbPath.replace(/\\/g, "/");
+            content = content.replace(fullMatch, `[![${altText}](file:///${safeThumbPath})](file:///${safePath})`);
+          } catch (e) {
+            console.error("Failed to generate thumbnail for", linkedFile.name, e);
+            content = content.replace(fullMatch, `[\u{1F3A5} ${linkedFile.name}](file:///${safePath})`);
+          }
+        }
+      }
+    }
+    const tempMdPath = path.join(tempDir, `temp_${file.name}`);
+    fs.writeFileSync(tempMdPath, content, "utf8");
+    return tempMdPath;
+  }
   async exportWithPandoc(files, format, templatePath) {
     if (!this.settings.isPro) {
       new import_obsidian2.Notice(t("PRO_FEATURE_LOCKED"));
@@ -1127,69 +1226,90 @@ pb's writeObjects:fileArray
       PATH: `${process.env.PATH || ""}:/usr/local/bin:/opt/homebrew/bin:/Library/TeX/texbin:/usr/bin:/bin:/usr/sbin:/sbin`
     };
     let pandocMissing = false;
-    for (const file of files) {
-      const sourcePath = this.getAbsolutePath(file);
-      if (!sourcePath) {
-        errorCount++;
-        continue;
-      }
-      let destName = file.basename + "." + format.ext;
-      if (format.ext === "md" && sourcePath === path.join(this.settings.targetFolderPath, destName)) {
-        destName = file.basename + "_export." + format.ext;
-      }
-      const destPath = path.join(this.settings.targetFolderPath, destName);
-      let customArgs = this.settings.isPro && this.settings.customPandocArgs ? ` ${this.settings.customPandocArgs}` : "";
-      if (this.settings.isPro && templatePath && fs.existsSync(templatePath)) {
-        const ext = path.extname(templatePath).toLowerCase();
-        if (ext === ".docx" || ext === ".pptx") {
-          customArgs += ` --reference-doc="${templatePath}"`;
-        } else {
-          customArgs += ` --template="${templatePath}"`;
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "natural-move-"));
+    try {
+      for (const file of files) {
+        const originalSourcePath = this.getAbsolutePath(file);
+        if (!originalSourcePath) {
+          errorCount++;
+          continue;
         }
-      }
-      const cmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -o "${destPath}"`;
-      try {
-        await new Promise((resolve, reject) => {
-          (0, import_child_process.exec)(cmd, { env }, (error, stdout, stderr) => {
-            if (error) {
-              console.error("Pandoc Error:", error, stderr);
-              lastError = stderr || error.message;
-              reject(error);
-            } else {
-              resolve();
-            }
-          });
-        });
-        successCount++;
-      } catch (err) {
-        console.error(`Fehler beim Export von ${file.name}:`, err);
-        const errorStr = (err?.message || "") + " " + (lastError || "");
-        if (errorStr.toLowerCase().includes("yaml") || errorStr.toLowerCase().includes("metadata")) {
-          console.log("YAML error detected, trying fallback without metadata...");
-          const fallbackCmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -f markdown-yaml_metadata_block -o "${destPath}"`;
+        let sourcePath = originalSourcePath;
+        if (file.extension === "md") {
           try {
-            await new Promise((resolve, reject) => {
-              (0, import_child_process.exec)(fallbackCmd, { env }, (error, stdout, stderr) => {
-                if (error) {
-                  lastError = stderr || error.message;
-                  reject(error);
-                } else {
-                  resolve();
-                }
-              });
+            sourcePath = await this.processMarkdownForExport(file, tempDir);
+          } catch (e) {
+            console.error("Pre-processing failed for", file.name, e);
+          }
+        }
+        let destName = file.basename + "." + format.ext;
+        if (format.ext === "md" && originalSourcePath === path.join(this.settings.targetFolderPath, destName)) {
+          destName = file.basename + "_export." + format.ext;
+        }
+        const destPath = path.join(this.settings.targetFolderPath, destName);
+        let customArgs = this.settings.isPro && this.settings.customPandocArgs ? ` ${this.settings.customPandocArgs}` : "";
+        if (this.settings.isPro && templatePath && fs.existsSync(templatePath)) {
+          const ext = path.extname(templatePath).toLowerCase();
+          if (ext === ".docx" || ext === ".pptx") {
+            customArgs += ` --reference-doc="${templatePath}"`;
+          } else {
+            customArgs += ` --template="${templatePath}"`;
+          }
+        }
+        const originalDir = path.dirname(originalSourcePath);
+        customArgs += ` --resource-path="${originalDir}"`;
+        const cmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -o "${destPath}"`;
+        try {
+          await new Promise((resolve, reject) => {
+            (0, import_child_process.exec)(cmd, { env }, (error, stdout, stderr) => {
+              if (error) {
+                console.error("Pandoc Error:", error, stderr);
+                lastError = stderr || error.message;
+                reject(error);
+              } else {
+                resolve();
+              }
             });
-            successCount++;
-            new import_obsidian2.Notice(t("EXPORT_FALLBACK_YAML") + ` (${file.name})`);
-          } catch (fallbackErr) {
-            console.error(`Fallback-Fehler beim Export von ${file.name}:`, fallbackErr);
+          });
+          successCount++;
+        } catch (err) {
+          console.error(`Fehler beim Export von ${file.name}:`, err);
+          const errorMessage = err instanceof Error ? err.message : String(err);
+          const errorCode = err && typeof err === "object" && "code" in err ? String(err.code) : "";
+          const errorStr = errorMessage + " " + (lastError || "");
+          if (errorStr.toLowerCase().includes("yaml") || errorStr.toLowerCase().includes("metadata")) {
+            console.debug("YAML error detected, trying fallback without metadata...");
+            const fallbackCmd = `"${pandocCmd}" "${sourcePath}" ${format.args}${customArgs} -f markdown-yaml_metadata_block -o "${destPath}"`;
+            try {
+              await new Promise((resolve, reject) => {
+                (0, import_child_process.exec)(fallbackCmd, { env }, (error, stdout, stderr) => {
+                  if (error) {
+                    lastError = stderr || error.message;
+                    reject(error);
+                  } else {
+                    resolve();
+                  }
+                });
+              });
+              successCount++;
+              new import_obsidian2.Notice(t("EXPORT_FALLBACK_YAML") + ` (${file.name})`);
+            } catch (fallbackErr) {
+              console.error(`Fallback-Fehler beim Export von ${file.name}:`, fallbackErr);
+              errorCount++;
+            }
+          } else if (errorCode === "ENOENT" || errorMessage.includes("command not found") || errorMessage.includes("nicht gefunden")) {
+            pandocMissing = true;
+            break;
+          } else {
             errorCount++;
           }
-        } else if (err && (err.code === "ENOENT" || err.message && err.message.includes("command not found") || err.message && err.message.includes("nicht gefunden"))) {
-          pandocMissing = true;
-          break;
-        } else {
-          errorCount++;
         }
+      }
+    } finally {
+      try {
+        fs.rmSync(tempDir, { recursive: true, force: true });
+      } catch (e) {
+        console.error("Failed to clean up temporary directory", e);
       }
     }
     if (pandocMissing) {
@@ -1295,7 +1415,7 @@ var NaturalMoveSettingTab = class extends import_obsidian2.PluginSettingTab {
             this.plugin.settings.instanceId = "";
             new import_obsidian2.Notice(t("LICENSE_INVALID") + (status.message ? `: ${status.message}` : ""));
           } else {
-            new import_obsidian2.Notice(status.message || "Connection error");
+            new import_obsidian2.Notice(status.message || t("LICENSE_CONNECTION_ERROR"));
           }
         }
         await this.plugin.saveSettings();
@@ -1370,7 +1490,9 @@ var NaturalMoveSettingTab = class extends import_obsidian2.PluginSettingTab {
     }));
     containerEl.createEl("hr");
     new import_obsidian2.Setting(containerEl).setName(t("SETTING_HELP_NAME")).setDesc(t("SETTING_HELP_DESC")).addButton((btn) => btn.setButtonText(t("SETTING_HELP_BUTTON")).onClick(() => {
-      window.open("https://github.com/Naturalis3/Obsidian-Natural-Move-Export/blob/main/README.md");
+      window.open("https://naturalis3.github.io/Obsidian-Natural-Move-Export/");
+    })).addButton((btn) => btn.setButtonText(t("SETTING_HELP_BUG_BUTTON")).onClick(() => {
+      window.open("https://github.com/Naturalis3/Obsidian-Natural-Move-Export/issues");
     }));
   }
 };

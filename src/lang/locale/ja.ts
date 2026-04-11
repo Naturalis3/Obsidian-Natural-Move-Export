@@ -58,6 +58,7 @@ export default {
 	SETTING_HELP_NAME: "📖 ドキュメントとヘルプ",
 	SETTING_HELP_DESC: "公式ドキュメントとセットアップガイドを開きます。",
 	SETTING_HELP_BUTTON: "ドキュメントを開く",
+	SETTING_HELP_BUG_BUTTON: "バグを報告",
 	EXPORT_FALLBACK_YAML: "メタデータなしでエクスポートされました（YAMLエラーを回避）。",
 	LICENSE_CONNECTION_ERROR: "接続エラー。インターネット接続を確認してください。",
 };
