@@ -21,7 +21,7 @@ Obsidian 的文件资源管理器功能强大，但相对孤立。将文件从 O
 ## ✨ 核心功能
 
 ### 📋 原生系统复制 (免费版和专业版)
-在 Obsidian 中选择文件并按 `Cmd + C` (Mac) 或 `Ctrl + C` (Win)。然后，您可以使用 `Cmd + V` 直接将其粘贴到桌面或任何其他应用程序中。
+在 Obsidian 中选择文件并按 `Cmd + C` (macOS) 或 `Ctrl + C` (Win)。然后，您可以使用 `Cmd + V` 直接将其粘贴到桌面或任何其他应用程序中。
 *   **免费版：** 复制单个文件。
 *   **专业版：** 复制整个文件夹及其内容。
 
@@ -74,9 +74,9 @@ Obsidian 的文件资源管理器功能强大，但相对孤立。将文件从 O
 
 ### ⚠️ PDF 和 Beamer 导出重要提示 (MacTeX)
 
-Pandoc 需要后台的 LaTeX 发行版来生成 PDF 和 Beamer 演示文稿。在 Mac 上，**MacTeX** 是标准配置。在 Windows 上，推荐使用 **MiKTeX**。
+Pandoc 需要后台的 LaTeX 发行版来生成 PDF 和 Beamer 演示文稿。在 macOS 上，**MacTeX** 是标准配置。在 Windows 上，推荐使用 **MiKTeX**。
 
-**安装 MacTeX (Mac)：**
+**安装 MacTeX (macOS)：**
 
 *选项 1：通过 Homebrew (推荐)*
 打开终端并输入以下命令：

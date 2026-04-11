@@ -21,7 +21,7 @@ Der Datei-Explorer von Obsidian ist mächtig, aber isoliert. Das Kopieren von Da
 ## ✨ Hauptfunktionen
 
 ### 📋 Natives System-Kopieren (Free & Pro)
-Wähle Dateien in Obsidian aus und drücke `Cmd + C` (Mac) oder `Ctrl + C` (Win). Du kannst sie dann mit `Cmd + V` direkt auf deinen Desktop oder in jede andere Anwendung einfügen.
+Wähle Dateien in Obsidian aus und drücke `Cmd + C` (macOS) oder `Ctrl + C` (Win). Du kannst sie dann mit `Cmd + V` direkt auf deinen Desktop oder in jede andere Anwendung einfügen.
 *   **Free:** Kopieren einzelner Dateien.
 *   **Pro:** Kopieren ganzer Ordner und deren Inhalte.
 
@@ -74,9 +74,9 @@ Um die Exportfunktionen (Word, PowerPoint, PDF, etc.) nutzen zu können, muss **
 
 ### ⚠️ Wichtig für PDF- und Beamer-Export (MacTeX & MiKTeX)
 
-Pandoc benötigt eine LaTeX-Distribution im Hintergrund, um PDFs und Beamer-Präsentationen zu generieren. Auf dem Mac ist **MacTeX** der Standard. Auf Windows wird **MiKTeX** empfohlen.
+Pandoc benötigt eine LaTeX-Distribution im Hintergrund, um PDFs und Beamer-Präsentationen zu generieren. Unter macOS ist **MacTeX** der Standard. Auf Windows wird **MiKTeX** empfohlen.
 
-**Installation von MacTeX (Mac):**
+**Installation von MacTeX (macOS):**
 
 *Option 1: Über Homebrew (Empfohlen)*
 Öffne das Terminal und gib den folgenden Befehl ein:

@@ -21,7 +21,7 @@ El Explorador de archivos de Obsidian es potente, pero está aislado. Copiar arc
 ## ✨ Características principales
 
 ### 📋 Copia nativa del sistema (Gratis y Pro)
-Seleccione archivos en Obsidian y presione `Cmd + C` (Mac) o `Ctrl + C` (Win). Luego puede pegarlos directamente en su escritorio o en cualquier otra aplicación con `Cmd + V`.
+Seleccione archivos en Obsidian y presione `Cmd + C` (macOS) o `Ctrl + C` (Win). Luego puede pegarlos directamente en su escritorio o en cualquier otra aplicación con `Cmd + V`.
 *   **Gratis:** Copia de archivos individuales.
 *   **Pro:** Copia de carpetas completas y su contenido.
 
@@ -74,9 +74,9 @@ Para usar las funciones de exportación (Word, PowerPoint, PDF, etc.), **Pandoc*
 
 ### ⚠️ Importante para la exportación a PDF y Beamer (MacTeX & MiKTeX)
 
-Pandoc requiere una distribución de LaTeX en segundo plano para generar archivos PDF y presentaciones de Beamer. En Mac, **MacTeX** es el estándar. En Windows, se recomienda **MiKTeX**.
+Pandoc requiere una distribución de LaTeX en segundo plano para generar archivos PDF y presentaciones de Beamer. En macOS, **MacTeX** es el estándar. En Windows, se recomienda **MiKTeX**.
 
-**Instalación de MacTeX (Mac):**
+**Instalación de MacTeX (macOS):**
 
 *Opción 1: A través de Homebrew (Recomendado)*
 Abra la terminal e ingrese el siguiente comando:

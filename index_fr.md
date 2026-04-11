@@ -21,7 +21,7 @@ L'explorateur de fichiers d'Obsidian est puissant, mas isolé. Copier des fichie
 ## ✨ Caractéristiques principales
 
 ### 📋 Copie système native (Gratuit & Pro)
-Sélectionnez des fichiers dans Obsidian et appuyez sur `Cmd + C` (Mac) ou `Ctrl + C` (Win). Vous pouvez ensuite les coller directement sur votre bureau ou dans toute autre application avec `Cmd + V`.
+Sélectionnez des fichiers dans Obsidian et appuyez sur `Cmd + C` (macOS) ou `Ctrl + C` (Win). Vous pouvez ensuite les coller directement sur votre bureau ou dans toute autre application avec `Cmd + V`.
 *   **Gratuit :** Copie de fichiers individuels.
 *   **Pro :** Copie de dossiers entiers et de leur contenu.
 
@@ -74,9 +74,9 @@ Pour utiliser les fonctions d'exportation (Word, PowerPoint, PDF, etc.), **Pando
 
 ### ⚠️ Important pour l'exportation PDF et Beamer (MacTeX & MiKTeX)
 
-Pandoc nécessite une distribution LaTeX en arrière-plan pour générer des PDF et des présentations Beamer. Sur Mac, **MacTeX** est la norme. Sur Windows, **MiKTeX** est recommandé.
+Pandoc nécessite une distribution LaTeX en arrière-plan pour générer des PDF et des présentations Beamer. Sur macOS, **MacTeX** est la norme. Sur Windows, **MiKTeX** est recommandé.
 
-**Installation de MacTeX (Mac) :**
+**Installation de MacTeX (macOS) :**
 
 *Option 1 : Via Homebrew (Recommandé)*
 Ouvrez le terminal et entrez la commande suivante :

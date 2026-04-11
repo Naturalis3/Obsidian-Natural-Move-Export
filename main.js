@@ -94,7 +94,7 @@ var en_default = {
   SETTING_BUY_PRO_NAME: "Get pro version",
   SETTING_BUY_PRO_DESC: "Unlock folder copying, pandoc templates, and custom arguments.",
   SETTING_BUY_PRO_BUTTON: "Buy license",
-  LICENSE_VALID: "License is valid! Pro features unlocked.",
+  LICENSE_VALID: "License is valid. Pro features unlocked.",
   LICENSE_INVALID: "Invalid license key.",
   PRO_FEATURE_LOCKED: "This is a pro feature. Please enter a valid license key.",
   COPY_COMMAND_NAME: "Copy selected files (from file explorer)",
@@ -102,11 +102,11 @@ var en_default = {
   PLACEHOLDER_TEMPLATES_FOLDER: "/path/to/templates",
   SETTING_PANDOC_DOWNLOAD_LINK: "Download pandoc here",
   SETTING_LATEX_NAME: "PDF export requirements (LaTeX)",
-  SETTING_LATEX_DESC: "To export as PDF, Pandoc requires a LaTeX distribution.",
-  SETTING_LATEX_MAC_BUTTON: "Get MacTeX (Mac)",
+  SETTING_LATEX_DESC: "To export as PDF, pandoc requires a LaTeX distribution.",
+  SETTING_LATEX_MAC_BUTTON: "Get MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "Get MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc not found! Please install pandoc or check the path in settings.",
-  SETTING_HELP_NAME: "\u{1F4D6} Documentation & help",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc not found. Please install pandoc or check the path in settings.",
+  SETTING_HELP_NAME: "\u{1F4D6} Documentation and help",
   SETTING_HELP_DESC: "Open the official documentation and setup guide.",
   SETTING_HELP_BUTTON: "Open documentation",
   SETTING_HELP_BUG_BUTTON: "Report bug",
@@ -164,19 +164,19 @@ var de_default = {
   SETTING_BUY_PRO_NAME: "pro-Version holen",
   SETTING_BUY_PRO_DESC: "Schalte Ordner-Kopieren, pandoc-Vorlagen und eigene Argumente frei.",
   SETTING_BUY_PRO_BUTTON: "Lizenz kaufen",
-  LICENSE_VALID: "Lizenz ist g\xFCltig! Pro-Funktionen freigeschaltet.",
+  LICENSE_VALID: "Lizenz ist g\xFCltig. Pro-Funktionen freigeschaltet.",
   LICENSE_INVALID: "Ung\xFCltiger Lizenzschl\xFCssel.",
   PRO_FEATURE_LOCKED: "Dies ist eine pro-Funktion. Bitte gib einen g\xFCltigen Lizenzschl\xFCssel ein.",
   COPY_COMMAND_NAME: "Kopiere markierte Dateien (aus dem File Explorer)",
   PLACEHOLDER_TARGET_FOLDER: "/pfad/zum/ordner",
   PLACEHOLDER_TEMPLATES_FOLDER: "/pfad/zu/vorlagen",
-  SETTING_PANDOC_DOWNLOAD_LINK: "Hier Pandoc herunterladen",
+  SETTING_PANDOC_DOWNLOAD_LINK: "Hier pandoc herunterladen",
   SETTING_LATEX_NAME: "PDF-Export Voraussetzungen (LaTeX)",
-  SETTING_LATEX_DESC: "F\xFCr den PDF-Export ben\xF6tigt Pandoc eine LaTeX-Distribution.",
-  SETTING_LATEX_MAC_BUTTON: "MacTeX laden (Mac)",
+  SETTING_LATEX_DESC: "F\xFCr den PDF-Export ben\xF6tigt pandoc eine LaTeX-Distribution.",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX laden (macOS)",
   SETTING_LATEX_WIN_BUTTON: "MiKTeX laden (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc nicht gefunden! Bitte installiere Pandoc oder pr\xFCfe den Pfad in den Einstellungen.",
-  SETTING_HELP_NAME: "\u{1F4D6} Dokumentation & Hilfe",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc nicht gefunden. Bitte installiere pandoc oder pr\xFCfe den Pfad in den Einstellungen.",
+  SETTING_HELP_NAME: "\u{1F4D6} Dokumentation und Hilfe",
   SETTING_HELP_DESC: "\xD6ffne die offizielle Dokumentation und Installationsanleitung.",
   SETTING_HELP_BUTTON: "Dokumentation \xF6ffnen",
   SETTING_HELP_BUG_BUTTON: "Fehler melden",
@@ -234,19 +234,19 @@ var fr_default = {
   SETTING_BUY_PRO_NAME: "Obtenir la version pro",
   SETTING_BUY_PRO_DESC: "D\xE9bloquez la copie de dossiers, les mod\xE8les pandoc et les arguments personnalis\xE9s.",
   SETTING_BUY_PRO_BUTTON: "Acheter une licence",
-  LICENSE_VALID: "La licence est valide ! Fonctionnalit\xE9s pro d\xE9bloqu\xE9es.",
+  LICENSE_VALID: "La licence est valide. Fonctionnalit\xE9s pro d\xE9bloqu\xE9es.",
   LICENSE_INVALID: "Cl\xE9 de licence invalide.",
   PRO_FEATURE_LOCKED: "C'est une fonctionnalit\xE9 pro. Veuillez entrer une cl\xE9 de licence valide.",
   COPY_COMMAND_NAME: "Copier les fichiers s\xE9lectionn\xE9s (depuis l'explorateur de fichiers)",
   PLACEHOLDER_TARGET_FOLDER: "/chemin/vers/dossier",
   PLACEHOLDER_TEMPLATES_FOLDER: "/chemin/vers/modeles",
-  SETTING_PANDOC_DOWNLOAD_LINK: "T\xE9l\xE9charger Pandoc ici",
+  SETTING_PANDOC_DOWNLOAD_LINK: "T\xE9l\xE9charger pandoc ici",
   SETTING_LATEX_NAME: "Pr\xE9requis pour l'export PDF (LaTeX)",
-  SETTING_LATEX_DESC: "Pour exporter en PDF, Pandoc n\xE9cessite une distribution LaTeX.",
-  SETTING_LATEX_MAC_BUTTON: "Obtenir MacTeX (Mac)",
+  SETTING_LATEX_DESC: "Pour exporter en PDF, pandoc n\xE9cessite une distribution LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obtenir MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "Obtenir MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc introuvable ! Veuillez installer Pandoc ou v\xE9rifier le chemin dans les param\xE8tres.",
-  SETTING_HELP_NAME: "\u{1F4D6} Documentation & Aide",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc introuvable. Veuillez installer pandoc ou v\xE9rifier le chemin dans les param\xE8tres.",
+  SETTING_HELP_NAME: "\u{1F4D6} Documentation et aide",
   SETTING_HELP_DESC: "Ouvrir la documentation officielle et le guide d'installation.",
   SETTING_HELP_BUTTON: "Ouvrir la documentation",
   SETTING_HELP_BUG_BUTTON: "Signaler un bug",
@@ -304,19 +304,19 @@ var es_default = {
   SETTING_BUY_PRO_NAME: "Obtener versi\xF3n pro",
   SETTING_BUY_PRO_DESC: "Desbloquee la copia de carpetas, plantillas de pandoc y argumentos personalizados.",
   SETTING_BUY_PRO_BUTTON: "Comprar licencia",
-  LICENSE_VALID: "\xA1La licencia es v\xE1lida! Funciones pro desbloqueadas.",
+  LICENSE_VALID: "La licencia es v\xE1lida. Funciones pro desbloqueadas.",
   LICENSE_INVALID: "Clave de licencia inv\xE1lida.",
   PRO_FEATURE_LOCKED: "Esta es una funci\xF3n pro. Ingrese una clave de licencia v\xE1lida.",
   COPY_COMMAND_NAME: "Copiar archivos seleccionados (desde el explorador de archivos)",
   PLACEHOLDER_TARGET_FOLDER: "/ruta/al/carpeta",
   PLACEHOLDER_TEMPLATES_FOLDER: "/ruta/a/plantillas",
-  SETTING_PANDOC_DOWNLOAD_LINK: "Descargar Pandoc aqu\xED",
+  SETTING_PANDOC_DOWNLOAD_LINK: "Descargar pandoc aqu\xED",
   SETTING_LATEX_NAME: "Requisitos de exportaci\xF3n PDF (LaTeX)",
-  SETTING_LATEX_DESC: "Para exportar a PDF, Pandoc requiere una distribuci\xF3n LaTeX.",
-  SETTING_LATEX_MAC_BUTTON: "Obtener MacTeX (Mac)",
+  SETTING_LATEX_DESC: "Para exportar a PDF, pandoc requiere una distribuci\xF3n LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obtener MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "Obtener MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F \xA1Pandoc no encontrado! Por favor, instala Pandoc o comprueba la ruta en los ajustes.",
-  SETTING_HELP_NAME: "\u{1F4D6} Documentaci\xF3n y Ayuda",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc no encontrado. Por favor, instala pandoc o comprueba la ruta en los ajustes.",
+  SETTING_HELP_NAME: "\u{1F4D6} Documentaci\xF3n y ayuda",
   SETTING_HELP_DESC: "Abre la documentaci\xF3n oficial y la gu\xEDa de configuraci\xF3n.",
   SETTING_HELP_BUTTON: "Abrir Documentaci\xF3n",
   SETTING_HELP_BUG_BUTTON: "Reportar error",
@@ -374,18 +374,18 @@ var zh_default = {
   SETTING_BUY_PRO_NAME: "\u83B7\u53D6 pro \u7248\u672C",
   SETTING_BUY_PRO_DESC: "\u89E3\u9501\u6587\u4EF6\u5939\u590D\u5236\u3001pandoc \u6A21\u677F\u548C\u81EA\u5B9A\u4E49\u53C2\u6570\u3002",
   SETTING_BUY_PRO_BUTTON: "\u8D2D\u4E70\u8BB8\u53EF\u8BC1",
-  LICENSE_VALID: "\u8BB8\u53EF\u8BC1\u6709\u6548\uFF01Pro \u529F\u80FD\u5DF2\u89E3\u9501\u3002",
+  LICENSE_VALID: "\u8BB8\u53EF\u8BC1\u6709\u6548\u3002Pro \u529F\u80FD\u5DF2\u89E3\u9501\u3002",
   LICENSE_INVALID: "\u8BB8\u53EF\u8BC1\u5BC6\u94A5\u65E0\u6548\u3002",
   PRO_FEATURE_LOCKED: "\u8FD9\u662F\u4E00\u4E2A pro \u529F\u80FD\u3002\u8BF7\u8F93\u5165\u6709\u6548\u7684\u8BB8\u53EF\u8BC1\u5BC6\u94A5\u3002",
   COPY_COMMAND_NAME: "\u590D\u5236\u6240\u9009\u6587\u4EF6\uFF08\u4ECE\u6587\u4EF6\u8D44\u6E90\u7BA1\u7406\u5668\uFF09",
   PLACEHOLDER_TARGET_FOLDER: "/\u6587\u4EF6\u5939\u8DEF\u5F84",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u6A21\u677F\u6587\u4EF6\u5939\u8DEF\u5F84",
-  SETTING_PANDOC_DOWNLOAD_LINK: "\u5728\u6B64\u4E0B\u8F7D Pandoc",
+  SETTING_PANDOC_DOWNLOAD_LINK: "\u5728\u6B64\u4E0B\u8F7D pandoc",
   SETTING_LATEX_NAME: "PDF \u5BFC\u51FA\u8981\u6C42 (LaTeX)",
-  SETTING_LATEX_DESC: "\u8981\u5BFC\u51FA\u4E3A PDF\uFF0CPandoc \u9700\u8981 LaTeX \u53D1\u884C\u7248\u3002",
-  SETTING_LATEX_MAC_BUTTON: "\u83B7\u53D6 MacTeX (Mac)",
+  SETTING_LATEX_DESC: "\u8981\u5BFC\u51FA\u4E3A PDF\uFF0Cpandoc \u9700\u8981 LaTeX \u53D1\u884C\u7248\u3002",
+  SETTING_LATEX_MAC_BUTTON: "\u83B7\u53D6 MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "\u83B7\u53D6 MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F \u672A\u627E\u5230 Pandoc\uFF01\u8BF7\u5B89\u88C5 Pandoc \u6216\u5728\u8BBE\u7F6E\u4E2D\u68C0\u67E5\u8DEF\u5F84\u3002",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F \u672A\u627E\u5230 pandoc\u3002\u8BF7\u5B89\u88C5 pandoc \u6216\u5728\u8BBE\u7F6E\u4E2D\u68C0\u67E5\u8DEF\u5F84\u3002",
   SETTING_HELP_NAME: "\u{1F4D6} \u6587\u6863\u4E0E\u5E2E\u52A9",
   SETTING_HELP_DESC: "\u6253\u5F00\u5B98\u65B9\u6587\u6863\u548C\u8BBE\u7F6E\u6307\u5357\u3002",
   SETTING_HELP_BUTTON: "\u6253\u5F00\u6587\u6863",
@@ -444,18 +444,18 @@ var ja_default = {
   SETTING_BUY_PRO_NAME: "pro\u30D0\u30FC\u30B8\u30E7\u30F3\u3092\u5165\u624B",
   SETTING_BUY_PRO_DESC: "\u30D5\u30A9\u30EB\u30C0\u306E\u30B3\u30D4\u30FC\u3001pandoc\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\u3001\u30AB\u30B9\u30BF\u30E0\u5F15\u6570\u3092\u30A2\u30F3\u30ED\u30C3\u30AF\u3057\u307E\u3059\u3002",
   SETTING_BUY_PRO_BUTTON: "\u30E9\u30A4\u30BB\u30F3\u30B9\u3092\u8CFC\u5165",
-  LICENSE_VALID: "\u30E9\u30A4\u30BB\u30F3\u30B9\u306F\u6709\u52B9\u3067\u3059\uFF01Pro\u6A5F\u80FD\u304C\u30A2\u30F3\u30ED\u30C3\u30AF\u3055\u308C\u307E\u3057\u305F\u3002",
+  LICENSE_VALID: "\u30E9\u30A4\u30BB\u30F3\u30B9\u306F\u6709\u52B9\u3067\u3059\u3002Pro\u6A5F\u80FD\u304C\u30A2\u30F3\u30ED\u30C3\u30AF\u3055\u308C\u307E\u3057\u305F\u3002",
   LICENSE_INVALID: "\u7121\u52B9\u306A\u30E9\u30A4\u30BB\u30F3\u30B9\u30AD\u30FC\u3067\u3059\u3002",
   PRO_FEATURE_LOCKED: "\u3053\u308C\u306Fpro\u6A5F\u80FD\u3067\u3059\u3002\u6709\u52B9\u306A\u30E9\u30A4\u30BB\u30F3\u30B9\u30AD\u30FC\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
   COPY_COMMAND_NAME: "\u9078\u629E\u3057\u305F\u30D5\u30A1\u30A4\u30EB\u3092\u30B3\u30D4\u30FC (\u30D5\u30A1\u30A4\u30EB\u30A8\u30AF\u30B9\u30D7\u30ED\u30FC\u30E9\u30FC\u304B\u3089)",
   PLACEHOLDER_TARGET_FOLDER: "/\u30D5\u30A9\u30EB\u30C0\u3078\u306E\u30D1\u30B9",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\u3078\u306E\u30D1\u30B9",
-  SETTING_PANDOC_DOWNLOAD_LINK: "\u3053\u3053\u3067Pandoc\u3092\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9",
+  SETTING_PANDOC_DOWNLOAD_LINK: "\u3053\u3053\u3067pandoc\u3092\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9",
   SETTING_LATEX_NAME: "PDF\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u306E\u8981\u4EF6 (LaTeX)",
-  SETTING_LATEX_DESC: "PDF\u3068\u3057\u3066\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u3059\u308B\u306B\u306F\u3001Pandoc\u306BLaTeX\u30C7\u30A3\u30B9\u30C8\u30EA\u30D3\u30E5\u30FC\u30B7\u30E7\u30F3\u304C\u5FC5\u8981\u3067\u3059\u3002",
-  SETTING_LATEX_MAC_BUTTON: "MacTeX\u3092\u5165\u624B (Mac)",
+  SETTING_LATEX_DESC: "PDF\u3068\u3057\u3066\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u3059\u308B\u306B\u306F\u3001pandoc\u306BLaTeX\u30C7\u30A3\u30B9\u30C8\u30EA\u30D3\u30E5\u30FC\u30B7\u30E7\u30F3\u304C\u5FC5\u8981\u3067\u3059\u3002",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX\u3092\u5165\u624B (macOS)",
   SETTING_LATEX_WIN_BUTTON: "MiKTeX\u3092\u5165\u624B (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093\uFF01Pandoc\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3059\u308B\u304B\u3001\u8A2D\u5B9A\u3067\u30D1\u30B9\u3092\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093\u3002pandoc\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3059\u308B\u304B\u3001\u8A2D\u5B9A\u3067\u30D1\u30B9\u3092\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
   SETTING_HELP_NAME: "\u{1F4D6} \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30D8\u30EB\u30D7",
   SETTING_HELP_DESC: "\u516C\u5F0F\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u30AC\u30A4\u30C9\u3092\u958B\u304D\u307E\u3059\u3002",
   SETTING_HELP_BUTTON: "\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3092\u958B\u304F",
@@ -514,18 +514,18 @@ var ko_default = {
   SETTING_BUY_PRO_NAME: "pro \uBC84\uC804 \uBC1B\uAE30",
   SETTING_BUY_PRO_DESC: "\uD3F4\uB354 \uBCF5\uC0AC, pandoc \uD15C\uD50C\uB9BF \uBC0F \uC0AC\uC6A9\uC790 \uC815\uC758 \uC778\uC218\uB97C \uC7A0\uAE08 \uD574\uC81C\uD569\uB2C8\uB2E4.",
   SETTING_BUY_PRO_BUTTON: "\uB77C\uC774\uC120\uC2A4 \uAD6C\uB9E4",
-  LICENSE_VALID: "\uB77C\uC774\uC120\uC2A4\uAC00 \uC720\uD6A8\uD569\uB2C8\uB2E4! Pro \uAE30\uB2A5\uC774 \uD65C\uC131\uD654\uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
+  LICENSE_VALID: "\uB77C\uC774\uC120\uC2A4\uAC00 \uC720\uD6A8\uD569\uB2C8\uB2E4. Pro \uAE30\uB2A5\uC774 \uD65C\uC131\uD654\uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
   LICENSE_INVALID: "\uC720\uD6A8\uD558\uC9C0 \uC54A\uC740 \uB77C\uC774\uC120\uC2A4 \uD0A4\uC785\uB2C8\uB2E4.",
   PRO_FEATURE_LOCKED: "\uC774\uAC83\uC740 pro \uAE30\uB2A5\uC785\uB2C8\uB2E4. \uC720\uD6A8\uD55C \uB77C\uC774\uC120\uC2A4 \uD0A4\uB97C \uC785\uB825\uD558\uC2ED\uC2DC\uC624.",
   COPY_COMMAND_NAME: "\uC120\uD0DD\uD55C \uD30C\uC77C \uBCF5\uC0AC (\uD30C\uC77C \uD0D0\uC0C9\uAE30\uC5D0\uC11C)",
   PLACEHOLDER_TARGET_FOLDER: "/\uD3F4\uB354/\uACBD\uB85C",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\uD15C\uD50C\uB9BF/\uACBD\uB85C",
-  SETTING_PANDOC_DOWNLOAD_LINK: "\uC5EC\uAE30\uC11C Pandoc \uB2E4\uC6B4\uB85C\uB4DC",
+  SETTING_PANDOC_DOWNLOAD_LINK: "\uC5EC\uAE30\uC11C pandoc \uB2E4\uC6B4\uB85C\uB4DC",
   SETTING_LATEX_NAME: "PDF \uB0B4\uBCF4\uB0B4\uAE30 \uC694\uAD6C \uC0AC\uD56D (LaTeX)",
-  SETTING_LATEX_DESC: "PDF\uB85C \uB0B4\uBCF4\uB0B4\uB824\uBA74 Pandoc\uC5D0 LaTeX \uBC30\uD3EC\uD310\uC774 \uD544\uC694\uD569\uB2C8\uB2E4.",
-  SETTING_LATEX_MAC_BUTTON: "MacTeX \uB2E4\uC6B4\uB85C\uB4DC (Mac)",
+  SETTING_LATEX_DESC: "PDF\uB85C \uB0B4\uBCF4\uB0B4\uB824\uBA74 pandoc\uC5D0 LaTeX \uBC30\uD3EC\uD310\uC774 \uD544\uC694\uD569\uB2C8\uB2E4.",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX \uB2E4\uC6B4\uB85C\uB4DC (macOS)",
   SETTING_LATEX_WIN_BUTTON: "MiKTeX \uB2E4\uC6B4\uB85C\uB4DC (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4! Pandoc\uC744 \uC124\uCE58\uD558\uAC70\uB098 \uC124\uC815\uC5D0\uC11C \uACBD\uB85C\uB97C \uD655\uC778\uD558\uC138\uC694.",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. pandoc\uC744 \uC124\uCE58\uD558\uAC70\uB098 \uC124\uC815\uC5D0\uC11C \uACBD\uB85C\uB97C \uD655\uC778\uD558\uC138\uC694.",
   SETTING_HELP_NAME: "\u{1F4D6} \uBB38\uC11C \uBC0F \uB3C4\uC6C0\uB9D0",
   SETTING_HELP_DESC: "\uACF5\uC2DD \uBB38\uC11C \uBC0F \uC124\uC815 \uAC00\uC774\uB4DC\uB97C \uC5FD\uB2C8\uB2E4.",
   SETTING_HELP_BUTTON: "\uBB38\uC11C \uC5F4\uAE30",
@@ -584,19 +584,19 @@ var pt_default = {
   SETTING_BUY_PRO_NAME: "Obter vers\xE3o pro",
   SETTING_BUY_PRO_DESC: "Desbloqueie a c\xF3pia de pastas, modelos pandoc e argumentos personalizados.",
   SETTING_BUY_PRO_BUTTON: "Comprar licen\xE7a",
-  LICENSE_VALID: "Licen\xE7a v\xE1lida! Recursos pro desbloqueados.",
+  LICENSE_VALID: "Licen\xE7a v\xE1lida. Recursos pro desbloqueados.",
   LICENSE_INVALID: "Chave de licen\xE7a inv\xE1lida.",
   PRO_FEATURE_LOCKED: "Este \xE9 um recurso pro. Por favor, insira uma chave de licen\xE7a v\xE1lida.",
   COPY_COMMAND_NAME: "Copiar arquivos selecionados (do explorador de arquivos)",
   PLACEHOLDER_TARGET_FOLDER: "/caminho/para/pasta",
   PLACEHOLDER_TEMPLATES_FOLDER: "/caminho/para/modelos",
-  SETTING_PANDOC_DOWNLOAD_LINK: "Baixar Pandoc aqui",
+  SETTING_PANDOC_DOWNLOAD_LINK: "Baixar pandoc aqui",
   SETTING_LATEX_NAME: "Requisitos de exporta\xE7\xE3o PDF (LaTeX)",
-  SETTING_LATEX_DESC: "Para exportar como PDF, o Pandoc requer uma distribui\xE7\xE3o LaTeX.",
-  SETTING_LATEX_MAC_BUTTON: "Obter MacTeX (Mac)",
+  SETTING_LATEX_DESC: "Para exportar como PDF, o pandoc requer uma distribui\xE7\xE3o LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obter MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "Obter MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc n\xE3o encontrado! Por favor, instale o Pandoc ou verifique o caminho nas configura\xE7\xF5es.",
-  SETTING_HELP_NAME: "\u{1F4D6} Documenta\xE7\xE3o e Ajuda",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc n\xE3o encontrado. Por favor, instale o pandoc ou verifique o caminho nas configura\xE7\xF5es.",
+  SETTING_HELP_NAME: "\u{1F4D6} Documenta\xE7\xE3o e ajuda",
   SETTING_HELP_DESC: "Abra a documenta\xE7\xE3o oficial e o guia de configura\xE7\xE3o.",
   SETTING_HELP_BUTTON: "Abrir Documenta\xE7\xE3o",
   SETTING_HELP_BUG_BUTTON: "Relatar erro",
@@ -654,18 +654,18 @@ var ru_default = {
   SETTING_BUY_PRO_NAME: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0432\u0435\u0440\u0441\u0438\u044E pro",
   SETTING_BUY_PRO_DESC: "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u0443\u0439\u0442\u0435 \u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u043F\u0430\u043F\u043E\u043A, \u0448\u0430\u0431\u043B\u043E\u043D\u044B pandoc \u0438 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0435 \u0430\u0440\u0433\u0443\u043C\u0435\u043D\u0442\u044B.",
   SETTING_BUY_PRO_BUTTON: "\u041A\u0443\u043F\u0438\u0442\u044C \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u044E",
-  LICENSE_VALID: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u0430! Pro-\u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0440\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u044B.",
+  LICENSE_VALID: "\u041B\u0438\u0446\u0435\u043D\u0437\u0438\u044F \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u0430. Pro-\u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0440\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u044B.",
   LICENSE_INVALID: "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u043E\u043D\u043D\u044B\u0439 \u043A\u043B\u044E\u0447.",
   PRO_FEATURE_LOCKED: "\u042D\u0442\u043E pro-\u0444\u0443\u043D\u043A\u0446\u0438\u044F. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043B\u0438\u0446\u0435\u043D\u0437\u0438\u043E\u043D\u043D\u044B\u0439 \u043A\u043B\u044E\u0447.",
   COPY_COMMAND_NAME: "\u041A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B (\u0438\u0437 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0430)",
   PLACEHOLDER_TARGET_FOLDER: "/\u043F\u0443\u0442\u044C/\u043A/\u043F\u0430\u043F\u043A\u0435",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u043F\u0443\u0442\u044C/\u043A/\u0448\u0430\u0431\u043B\u043E\u043D\u0430\u043C",
-  SETTING_PANDOC_DOWNLOAD_LINK: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C Pandoc \u0437\u0434\u0435\u0441\u044C",
+  SETTING_PANDOC_DOWNLOAD_LINK: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C pandoc \u0437\u0434\u0435\u0441\u044C",
   SETTING_LATEX_NAME: "\u0422\u0440\u0435\u0431\u043E\u0432\u0430\u043D\u0438\u044F \u0434\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u0432 PDF (LaTeX)",
-  SETTING_LATEX_DESC: "\u0414\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u0432 PDF Pandoc \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u0432 LaTeX.",
-  SETTING_LATEX_MAC_BUTTON: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C MacTeX (Mac)",
+  SETTING_LATEX_DESC: "\u0414\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u0432 PDF pandoc \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u0432 LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C MacTeX (macOS)",
   SETTING_LATEX_WIN_BUTTON: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C MiKTeX (Windows)",
-  PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D! \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 Pandoc \u0438\u043B\u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043F\u0443\u0442\u044C \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445.",
+  PANDOC_NOT_FOUND: "\u26A0\uFE0F pandoc \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 pandoc \u0438\u043B\u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043F\u0443\u0442\u044C \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445.",
   SETTING_HELP_NAME: "\u{1F4D6} \u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u0438 \u043F\u043E\u043C\u043E\u0449\u044C",
   SETTING_HELP_DESC: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E \u0438 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E \u043F\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0435.",
   SETTING_HELP_BUTTON: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E",
@@ -1205,7 +1205,8 @@ pb's writeObjects:fileArray
       };
       video.onerror = (e) => {
         video.remove();
-        reject(new Error(`Error loading video: ${e}`));
+        const errorMessage = e instanceof Event ? "Video playback error" : String(e);
+        reject(new Error(`Error loading video: ${errorMessage}`));
       };
     });
   }
@@ -1216,8 +1217,30 @@ pb's writeObjects:fileArray
     for (const match of matches) {
       const fullMatch = match[0];
       const linkContent = match[1];
-      const [linkPath, ...altParts] = linkContent.split("|");
-      const altText = altParts.join("|") || "";
+      const altParts = linkContent.split("|");
+      const linkPath = altParts.shift() || "";
+      let caption = "";
+      let width = "";
+      let height = "";
+      if (altParts.length > 0) {
+        const lastPart = altParts[altParts.length - 1];
+        if (/^\d+$/.test(lastPart)) {
+          width = lastPart;
+          altParts.pop();
+        } else if (/^\d+x\d+$/.test(lastPart)) {
+          const [w, h] = lastPart.split("x");
+          width = w;
+          height = h;
+          altParts.pop();
+        }
+        caption = altParts.join("|");
+      }
+      let attributes = "";
+      if (width && height) {
+        attributes = `{width=${width}px height=${height}px}`;
+      } else if (width) {
+        attributes = `{width=${width}px}`;
+      }
       const linkedFile = this.app.metadataCache.getFirstLinkpathDest(linkPath, file.path);
       if (linkedFile instanceof import_obsidian2.TFile) {
         const absolutePath = this.getAbsolutePath(linkedFile);
@@ -1225,12 +1248,12 @@ pb's writeObjects:fileArray
         const extension = linkedFile.extension.toLowerCase();
         const safePath = absolutePath.replace(/\\/g, "/");
         if (["png", "jpg", "jpeg", "gif", "bmp", "svg", "webp"].includes(extension)) {
-          content = content.replace(fullMatch, `![${altText}](${safePath})`);
+          content = content.replace(fullMatch, `![${caption}](${safePath})${attributes}`);
         } else if (["mp4", "webm", "ogg", "mov"].includes(extension)) {
           try {
             const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
             const safeThumbPath = thumbPath.replace(/\\/g, "/");
-            content = content.replace(fullMatch, `[![${altText}](${safeThumbPath})](file:///${safePath})`);
+            content = content.replace(fullMatch, `[![${caption}](${safeThumbPath})${attributes}](file:///${safePath})`);
           } catch (e) {
             console.error("Failed to generate thumbnail for", linkedFile.name, e);
             content = content.replace(fullMatch, `[\u{1F3A5} ${linkedFile.name}](file:///${safePath})`);

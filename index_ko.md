@@ -21,7 +21,7 @@ Obsidian의 파일 탐색기는 강력하지만 고립되어 있습니다. Obsid
 ## ✨ 주요 기능
 
 ### 📋 네이티브 시스템 복사 (무료 및 프로)
-Obsidian에서 파일을 선택하고 `Cmd + C` (Mac) 또는 `Ctrl + C` (Win)를 누릅니다. 그런 다음 `Cmd + V`를 사용하여 데스크탑이나 다른 애플리케이션에 직접 붙여넣을 수 있습니다.
+Obsidian에서 파일을 선택하고 `Cmd + C` (macOS) 또는 `Ctrl + C` (Win)를 누릅니다. 그런 다음 `Cmd + V`를 사용하여 데스크탑이나 다른 애플리케이션에 직접 붙여넣을 수 있습니다.
 *   **무료:** 개별 파일 복사.
 *   **프로:** 전체 폴더 및 내용 복사.
 
@@ -74,9 +74,9 @@ Obsidian에서 파일을 선택하고 `Cmd + C` (Mac) 또는 `Ctrl + C` (Win)를
 
 ### ⚠️ PDF 및 Beamer 내보내기 중요 사항 (MacTeX & MiKTeX)
 
-Pandoc은 PDF 및 Beamer 프레젠테이션을 생성하기 위해 백그라운드에서 LaTeX 배포판이 필요합니다. Mac에서는 **MacTeX**이 표준입니다. Windows에서는 **MiKTeX**을 권장합니다.
+Pandoc은 PDF 및 Beamer 프레젠테이션을 생성하기 위해 백그라운드에서 LaTeX 배포판이 필요합니다. macOS에서는 **MacTeX**이 표준입니다. Windows에서는 **MiKTeX**을 권장합니다.
 
-**MacTeX 설치 (Mac):**
+**MacTeX 설치 (macOS):**
 
 *옵션 1: Homebrew를 통해 (권장)*
 터미널을 열고 다음 명령어를 입력하세요:

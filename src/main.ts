@@ -623,7 +623,8 @@ pb's writeObjects:fileArray
 
 			video.onerror = (e) => {
 				video.remove();
-				reject(new Error(`Error loading video: ${e}`));
+				const errorMessage = e instanceof Event ? 'Video playback error' : String(e);
+				reject(new Error(`Error loading video: ${errorMessage}`));
 			};
 		});
 	}
@@ -638,8 +639,33 @@ pb's writeObjects:fileArray
 		for (const match of matches) {
 			const fullMatch = match[0];
 			const linkContent = match[1];
-			const [linkPath, ...altParts] = linkContent.split('|');
-			const altText = altParts.join('|') || '';
+			const altParts = linkContent.split('|');
+			const linkPath = altParts.shift() || '';
+			
+			let caption = "";
+			let width = "";
+			let height = "";
+
+			if (altParts.length > 0) {
+				const lastPart = altParts[altParts.length - 1];
+				if (/^\d+$/.test(lastPart)) {
+					width = lastPart;
+					altParts.pop();
+				} else if (/^\d+x\d+$/.test(lastPart)) {
+					const [w, h] = lastPart.split('x');
+					width = w;
+					height = h;
+					altParts.pop();
+				}
+				caption = altParts.join('|');
+			}
+
+			let attributes = "";
+			if (width && height) {
+				attributes = `{width=${width}px height=${height}px}`;
+			} else if (width) {
+				attributes = `{width=${width}px}`;
+			}
 
 			const linkedFile = this.app.metadataCache.getFirstLinkpathDest(linkPath, file.path);
 			if (linkedFile instanceof TFile) {
@@ -650,14 +676,14 @@ pb's writeObjects:fileArray
 				const safePath = absolutePath.replace(/\\/g, '/');
 
 				if (['png', 'jpg', 'jpeg', 'gif', 'bmp', 'svg', 'webp'].includes(extension)) {
-					// Replace with absolute image link
-					content = content.replace(fullMatch, `![${altText}](${safePath})`);
+					// Replace with absolute image link and add Pandoc size attributes
+					content = content.replace(fullMatch, `![${caption}](${safePath})${attributes}`);
 				} else if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
 					// Video
 					try {
 						const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
 						const safeThumbPath = thumbPath.replace(/\\/g, '/');
-						content = content.replace(fullMatch, `[![${altText}](${safeThumbPath})](file:///${safePath})`);
+						content = content.replace(fullMatch, `[![${caption}](${safeThumbPath})${attributes}](file:///${safePath})`);
 					} catch (e) {
 						console.error("Failed to generate thumbnail for", linkedFile.name, e);
 						// Fallback to text link

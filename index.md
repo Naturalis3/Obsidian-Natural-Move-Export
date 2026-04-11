@@ -20,7 +20,7 @@ Obsidian's File Explorer is powerful, but isolated. Copying files out of Obsidia
 ## ✨ Key Features
 
 ### 📋 Native System Copy (Free & Pro)
-Select files in Obsidian and press `Cmd + C` (Mac) or `Ctrl + C` (Win). You can then paste them directly onto your desktop or into any other application with `Cmd + V`.
+Select files in Obsidian and press `Cmd + C` (macOS) or `Ctrl + C` (Win). You can then paste them directly onto your desktop or into any other application with `Cmd + V`.
 *   **Free:** Copy individual files.
 *   **Pro:** Copy entire folders and their contents.
 
@@ -73,9 +73,9 @@ To use the export functions (Word, PowerPoint, PDF, etc.), **Pandoc** must be in
 
 ### ⚠️ Important for PDF and Beamer Export (MacTeX & MiKTeX)
 
-Pandoc requires a LaTeX distribution in the background to generate PDFs and Beamer presentations. On Mac, **MacTeX** is the standard. On Windows, **MiKTeX** is recommended.
+Pandoc requires a LaTeX distribution in the background to generate PDFs and Beamer presentations. On macOS, **MacTeX** is the standard. On Windows, **MiKTeX** is recommended.
 
-**Installing MacTeX (Mac):**
+**Installing MacTeX (macOS):**
 
 *Option 1: Via Homebrew (Recommended)*
 Open the terminal and enter the following command:
