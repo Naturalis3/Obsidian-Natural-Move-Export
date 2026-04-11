@@ -72,9 +72,9 @@ Obsidian에서 파일을 선택하고 `Cmd + C` (Mac) 또는 `Ctrl + C` (Win)를
 - **Mac:** Homebrew를 통해 `brew install pandoc`을 설치하거나 [Pandoc 웹사이트](https://pandoc.org/installing.html)에서 설치 프로그램을 다운로드하세요.
 - **Windows:** Pandoc 웹사이트에서 설치 프로그램을 다운로드하세요.
 
-### ⚠️ PDF 및 Beamer 내보내기 중요 사항 (MacTeX)
+### ⚠️ PDF 및 Beamer 내보내기 중요 사항 (MacTeX & MiKTeX)
 
-Pandoc은 PDF 및 Beamer 프레젠테이션을 생성하기 위해 백그라운드에서 LaTeX 배포판이 필요합니다. Mac에서는 **MacTeX**이 표준입니다.
+Pandoc은 PDF 및 Beamer 프레젠테이션을 생성하기 위해 백그라운드에서 LaTeX 배포판이 필요합니다. Mac에서는 **MacTeX**이 표준입니다. Windows에서는 **MiKTeX**을 권장합니다.
 
 **MacTeX 설치 (Mac):**
 

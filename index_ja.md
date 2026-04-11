@@ -72,9 +72,9 @@ Obsidian でファイルを選択し、`Cmd + C` (Mac) または `Ctrl + C` (Win
 - **Mac:** Homebrew 経由で `brew install pandoc` を実行するか、[Pandoc ウェブサイト](https://pandoc.org/installing.html)からインストーラーをダウンロードします。
 - **Windows:** Pandoc ウェブサイトからインストーラーをダウンロードします。
 
-### ⚠️ PDF および Beamer エクスポートに関する重要事項 (MacTeX)
+### ⚠️ PDF および Beamer エクスポートに関する重要事項 (MacTeX & MiKTeX)
 
-Pandoc は、PDF および Beamer プレゼンテーションを生成するために、バックグラウンドで LaTeX ディストリビューションを必要とします。Mac では **MacTeX** が標準です。
+Pandoc は、PDF および Beamer プレゼンテーションを生成するために、バックグラウンドで LaTeX ディストリビューションを必要とします。Mac では **MacTeX** が標準です。Windows では **MiKTeX** が推奨されます。
 
 **MacTeX のインストール (Mac):**
 
@@ -89,7 +89,13 @@ brew install --cask mactex-no-gui
 1. 公式サイトにアクセス: [tug.org/mactex](https://www.tug.org/mactex/)
 2. `MacTeX.pkg` ファイルをダウンロードしてインストーラーを実行します。
 
-Pandoc と MacTeX をインストールした後、新しいシステムパスを認識させるために Obsidian を完全に再起動する必要がある場合があります。Natural Move/Export プラグインは、標準パス (`/Library/TeX/texbin`、`/opt/homebrew/bin`、`/usr/local/bin`) で必要なプログラムを自動的に検索します。
+
+**MiKTeX のインストール (Windows):**
+1. 公式サイトにアクセスします: [miktex.org/download](https://miktex.org/download)
+2. インストーラーをダウンロードして実行します。
+3. インストール中に、不足しているパッケージを自動的にインストールすることを選択します。
+
+Pandoc と MacTeX/MiKTeX をインストールした後、新しいシステムパスを認識させるために Obsidian を完全に再起動する必要がある場合があります。Natural Move/Export プラグインは、標準パス (`/Library/TeX/texbin`、`/opt/homebrew/bin`、`/usr/local/bin`) で必要なプログラムを自動的に検索します。
 
 ## Obsidian でのインストール
 

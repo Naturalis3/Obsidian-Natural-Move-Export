@@ -101,6 +101,10 @@ var en_default = {
   PLACEHOLDER_TARGET_FOLDER: "/path/to/folder",
   PLACEHOLDER_TEMPLATES_FOLDER: "/path/to/templates",
   SETTING_PANDOC_DOWNLOAD_LINK: "Download pandoc here",
+  SETTING_LATEX_NAME: "PDF export requirements (LaTeX)",
+  SETTING_LATEX_DESC: "To export as PDF, Pandoc requires a LaTeX distribution.",
+  SETTING_LATEX_MAC_BUTTON: "Get MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "Get MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc not found! Please install pandoc or check the path in settings.",
   SETTING_HELP_NAME: "\u{1F4D6} Documentation & help",
   SETTING_HELP_DESC: "Open the official documentation and setup guide.",
@@ -167,6 +171,10 @@ var de_default = {
   PLACEHOLDER_TARGET_FOLDER: "/pfad/zum/ordner",
   PLACEHOLDER_TEMPLATES_FOLDER: "/pfad/zu/vorlagen",
   SETTING_PANDOC_DOWNLOAD_LINK: "Hier Pandoc herunterladen",
+  SETTING_LATEX_NAME: "PDF-Export Voraussetzungen (LaTeX)",
+  SETTING_LATEX_DESC: "F\xFCr den PDF-Export ben\xF6tigt Pandoc eine LaTeX-Distribution.",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX laden (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "MiKTeX laden (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc nicht gefunden! Bitte installiere Pandoc oder pr\xFCfe den Pfad in den Einstellungen.",
   SETTING_HELP_NAME: "\u{1F4D6} Dokumentation & Hilfe",
   SETTING_HELP_DESC: "\xD6ffne die offizielle Dokumentation und Installationsanleitung.",
@@ -233,6 +241,10 @@ var fr_default = {
   PLACEHOLDER_TARGET_FOLDER: "/chemin/vers/dossier",
   PLACEHOLDER_TEMPLATES_FOLDER: "/chemin/vers/modeles",
   SETTING_PANDOC_DOWNLOAD_LINK: "T\xE9l\xE9charger Pandoc ici",
+  SETTING_LATEX_NAME: "Pr\xE9requis pour l'export PDF (LaTeX)",
+  SETTING_LATEX_DESC: "Pour exporter en PDF, Pandoc n\xE9cessite une distribution LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obtenir MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "Obtenir MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc introuvable ! Veuillez installer Pandoc ou v\xE9rifier le chemin dans les param\xE8tres.",
   SETTING_HELP_NAME: "\u{1F4D6} Documentation & Aide",
   SETTING_HELP_DESC: "Ouvrir la documentation officielle et le guide d'installation.",
@@ -299,6 +311,10 @@ var es_default = {
   PLACEHOLDER_TARGET_FOLDER: "/ruta/al/carpeta",
   PLACEHOLDER_TEMPLATES_FOLDER: "/ruta/a/plantillas",
   SETTING_PANDOC_DOWNLOAD_LINK: "Descargar Pandoc aqu\xED",
+  SETTING_LATEX_NAME: "Requisitos de exportaci\xF3n PDF (LaTeX)",
+  SETTING_LATEX_DESC: "Para exportar a PDF, Pandoc requiere una distribuci\xF3n LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obtener MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "Obtener MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F \xA1Pandoc no encontrado! Por favor, instala Pandoc o comprueba la ruta en los ajustes.",
   SETTING_HELP_NAME: "\u{1F4D6} Documentaci\xF3n y Ayuda",
   SETTING_HELP_DESC: "Abre la documentaci\xF3n oficial y la gu\xEDa de configuraci\xF3n.",
@@ -365,6 +381,10 @@ var zh_default = {
   PLACEHOLDER_TARGET_FOLDER: "/\u6587\u4EF6\u5939\u8DEF\u5F84",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u6A21\u677F\u6587\u4EF6\u5939\u8DEF\u5F84",
   SETTING_PANDOC_DOWNLOAD_LINK: "\u5728\u6B64\u4E0B\u8F7D Pandoc",
+  SETTING_LATEX_NAME: "PDF \u5BFC\u51FA\u8981\u6C42 (LaTeX)",
+  SETTING_LATEX_DESC: "\u8981\u5BFC\u51FA\u4E3A PDF\uFF0CPandoc \u9700\u8981 LaTeX \u53D1\u884C\u7248\u3002",
+  SETTING_LATEX_MAC_BUTTON: "\u83B7\u53D6 MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "\u83B7\u53D6 MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F \u672A\u627E\u5230 Pandoc\uFF01\u8BF7\u5B89\u88C5 Pandoc \u6216\u5728\u8BBE\u7F6E\u4E2D\u68C0\u67E5\u8DEF\u5F84\u3002",
   SETTING_HELP_NAME: "\u{1F4D6} \u6587\u6863\u4E0E\u5E2E\u52A9",
   SETTING_HELP_DESC: "\u6253\u5F00\u5B98\u65B9\u6587\u6863\u548C\u8BBE\u7F6E\u6307\u5357\u3002",
@@ -431,6 +451,10 @@ var ja_default = {
   PLACEHOLDER_TARGET_FOLDER: "/\u30D5\u30A9\u30EB\u30C0\u3078\u306E\u30D1\u30B9",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\u3078\u306E\u30D1\u30B9",
   SETTING_PANDOC_DOWNLOAD_LINK: "\u3053\u3053\u3067Pandoc\u3092\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9",
+  SETTING_LATEX_NAME: "PDF\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u306E\u8981\u4EF6 (LaTeX)",
+  SETTING_LATEX_DESC: "PDF\u3068\u3057\u3066\u30A8\u30AF\u30B9\u30DD\u30FC\u30C8\u3059\u308B\u306B\u306F\u3001Pandoc\u306BLaTeX\u30C7\u30A3\u30B9\u30C8\u30EA\u30D3\u30E5\u30FC\u30B7\u30E7\u30F3\u304C\u5FC5\u8981\u3067\u3059\u3002",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX\u3092\u5165\u624B (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "MiKTeX\u3092\u5165\u624B (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093\uFF01Pandoc\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3059\u308B\u304B\u3001\u8A2D\u5B9A\u3067\u30D1\u30B9\u3092\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
   SETTING_HELP_NAME: "\u{1F4D6} \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30D8\u30EB\u30D7",
   SETTING_HELP_DESC: "\u516C\u5F0F\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\u3068\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u30AC\u30A4\u30C9\u3092\u958B\u304D\u307E\u3059\u3002",
@@ -497,6 +521,10 @@ var ko_default = {
   PLACEHOLDER_TARGET_FOLDER: "/\uD3F4\uB354/\uACBD\uB85C",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\uD15C\uD50C\uB9BF/\uACBD\uB85C",
   SETTING_PANDOC_DOWNLOAD_LINK: "\uC5EC\uAE30\uC11C Pandoc \uB2E4\uC6B4\uB85C\uB4DC",
+  SETTING_LATEX_NAME: "PDF \uB0B4\uBCF4\uB0B4\uAE30 \uC694\uAD6C \uC0AC\uD56D (LaTeX)",
+  SETTING_LATEX_DESC: "PDF\uB85C \uB0B4\uBCF4\uB0B4\uB824\uBA74 Pandoc\uC5D0 LaTeX \uBC30\uD3EC\uD310\uC774 \uD544\uC694\uD569\uB2C8\uB2E4.",
+  SETTING_LATEX_MAC_BUTTON: "MacTeX \uB2E4\uC6B4\uB85C\uB4DC (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "MiKTeX \uB2E4\uC6B4\uB85C\uB4DC (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4! Pandoc\uC744 \uC124\uCE58\uD558\uAC70\uB098 \uC124\uC815\uC5D0\uC11C \uACBD\uB85C\uB97C \uD655\uC778\uD558\uC138\uC694.",
   SETTING_HELP_NAME: "\u{1F4D6} \uBB38\uC11C \uBC0F \uB3C4\uC6C0\uB9D0",
   SETTING_HELP_DESC: "\uACF5\uC2DD \uBB38\uC11C \uBC0F \uC124\uC815 \uAC00\uC774\uB4DC\uB97C \uC5FD\uB2C8\uB2E4.",
@@ -563,6 +591,10 @@ var pt_default = {
   PLACEHOLDER_TARGET_FOLDER: "/caminho/para/pasta",
   PLACEHOLDER_TEMPLATES_FOLDER: "/caminho/para/modelos",
   SETTING_PANDOC_DOWNLOAD_LINK: "Baixar Pandoc aqui",
+  SETTING_LATEX_NAME: "Requisitos de exporta\xE7\xE3o PDF (LaTeX)",
+  SETTING_LATEX_DESC: "Para exportar como PDF, o Pandoc requer uma distribui\xE7\xE3o LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "Obter MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "Obter MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc n\xE3o encontrado! Por favor, instale o Pandoc ou verifique o caminho nas configura\xE7\xF5es.",
   SETTING_HELP_NAME: "\u{1F4D6} Documenta\xE7\xE3o e Ajuda",
   SETTING_HELP_DESC: "Abra a documenta\xE7\xE3o oficial e o guia de configura\xE7\xE3o.",
@@ -629,6 +661,10 @@ var ru_default = {
   PLACEHOLDER_TARGET_FOLDER: "/\u043F\u0443\u0442\u044C/\u043A/\u043F\u0430\u043F\u043A\u0435",
   PLACEHOLDER_TEMPLATES_FOLDER: "/\u043F\u0443\u0442\u044C/\u043A/\u0448\u0430\u0431\u043B\u043E\u043D\u0430\u043C",
   SETTING_PANDOC_DOWNLOAD_LINK: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C Pandoc \u0437\u0434\u0435\u0441\u044C",
+  SETTING_LATEX_NAME: "\u0422\u0440\u0435\u0431\u043E\u0432\u0430\u043D\u0438\u044F \u0434\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u0432 PDF (LaTeX)",
+  SETTING_LATEX_DESC: "\u0414\u043B\u044F \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0430 \u0432 PDF Pandoc \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u0432 LaTeX.",
+  SETTING_LATEX_MAC_BUTTON: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C MacTeX (Mac)",
+  SETTING_LATEX_WIN_BUTTON: "\u0421\u043A\u0430\u0447\u0430\u0442\u044C MiKTeX (Windows)",
   PANDOC_NOT_FOUND: "\u26A0\uFE0F Pandoc \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D! \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 Pandoc \u0438\u043B\u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043F\u0443\u0442\u044C \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445.",
   SETTING_HELP_NAME: "\u{1F4D6} \u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u0438 \u043F\u043E\u043C\u043E\u0449\u044C",
   SETTING_HELP_DESC: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E \u0438 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E \u043F\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0435.",
@@ -1128,14 +1164,14 @@ pb's writeObjects:fileArray
   async createVideoThumbnail(videoFile, tempDir) {
     return new Promise((resolve, reject) => {
       const video = document.createElement("video");
-      video.style.display = "none";
+      video.classList.add("natural-move-hidden-video");
       video.muted = true;
       video.src = this.app.vault.getResourcePath(videoFile);
       video.crossOrigin = "anonymous";
       video.onloadedmetadata = () => {
         video.currentTime = Math.min(1, video.duration / 2);
       };
-      video.onseeked = async () => {
+      video.onseeked = () => {
         try {
           const canvas = document.createElement("canvas");
           canvas.width = video.videoWidth || 640;
@@ -1162,14 +1198,14 @@ pb's writeObjects:fileArray
             reject(new Error("Canvas context is null"));
           }
         } catch (e) {
-          reject(e);
+          reject(e instanceof Error ? e : new Error(String(e)));
         } finally {
           video.remove();
         }
       };
       video.onerror = (e) => {
         video.remove();
-        reject(e);
+        reject(new Error(`Error loading video: ${e}`));
       };
     });
   }
@@ -1189,12 +1225,12 @@ pb's writeObjects:fileArray
         const extension = linkedFile.extension.toLowerCase();
         const safePath = absolutePath.replace(/\\/g, "/");
         if (["png", "jpg", "jpeg", "gif", "bmp", "svg", "webp"].includes(extension)) {
-          content = content.replace(fullMatch, `![${altText}](file:///${safePath})`);
+          content = content.replace(fullMatch, `![${altText}](${safePath})`);
         } else if (["mp4", "webm", "ogg", "mov"].includes(extension)) {
           try {
             const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
             const safeThumbPath = thumbPath.replace(/\\/g, "/");
-            content = content.replace(fullMatch, `[![${altText}](file:///${safeThumbPath})](file:///${safePath})`);
+            content = content.replace(fullMatch, `[![${altText}](${safeThumbPath})](file:///${safePath})`);
           } catch (e) {
             console.error("Failed to generate thumbnail for", linkedFile.name, e);
             content = content.replace(fullMatch, `[\u{1F3A5} ${linkedFile.name}](file:///${safePath})`);
@@ -1458,6 +1494,20 @@ var NaturalMoveSettingTab = class extends import_obsidian2.PluginSettingTab {
       }
       return text;
     });
+    const latexDesc = document.createDocumentFragment();
+    latexDesc.appendText(t("SETTING_LATEX_DESC") + " ");
+    if (isWin) {
+      latexDesc.createEl("a", {
+        text: t("SETTING_LATEX_WIN_BUTTON"),
+        href: "https://miktex.org/download"
+      });
+    } else {
+      latexDesc.createEl("a", {
+        text: t("SETTING_LATEX_MAC_BUTTON"),
+        href: "https://tug.org/mactex/mactex-download.html"
+      });
+    }
+    new import_obsidian2.Setting(containerEl).setName(t("SETTING_LATEX_NAME")).setDesc(latexDesc);
     new import_obsidian2.Setting(containerEl).setName(t("SETTING_CUSTOM_ARGS_NAME") + (!this.plugin.settings.isPro ? " (Pro)" : "")).setDesc(t("SETTING_CUSTOM_ARGS_DESC")).addTextArea((text) => {
       text.setPlaceholder("--toc --citeproc ...").setValue(this.plugin.settings.customPandocArgs).onChange(async (value) => {
         this.plugin.settings.customPandocArgs = value.trim();

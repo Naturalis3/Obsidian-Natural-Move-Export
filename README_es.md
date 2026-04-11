@@ -67,9 +67,9 @@ Para usar las funciones de exportación (Word, PowerPoint, PDF, etc.), **Pandoc*
 - **Mac:** `brew install pandoc` (a través de Homebrew) o descargue el instalador desde el [sitio web de Pandoc](https://pandoc.org/installing.html).
 - **Windows:** Descargue el instalador desde el sitio web de Pandoc.
 
-### ⚠️ Importante para la exportación a PDF y Beamer (MacTeX)
+### ⚠️ Importante para la exportación a PDF y Beamer (MacTeX & MiKTeX)
 
-Pandoc requiere una distribución de LaTeX en segundo plano para generar archivos PDF y presentaciones de Beamer. En Mac, **MacTeX** es el estándar.
+Pandoc requiere una distribución de LaTeX en segundo plano para generar archivos PDF y presentaciones de Beamer. En Mac, **MacTeX** es el estándar. En Windows, se recomienda **MiKTeX**.
 
 **Instalación de MacTeX (Mac):**
 
@@ -84,7 +84,13 @@ brew install --cask mactex-no-gui
 1. Vaya al sitio web oficial: [tug.org/mactex](https://www.tug.org/mactex/)
 2. Descargue el archivo `MacTeX.pkg` y ejecute el instalador.
 
-Después de instalar Pandoc y MacTeX, es posible que deba reiniciar Obsidian por completo para que se reconozcan las nuevas rutas del sistema. El complemento Natural Move/Export busca automáticamente los programas requeridos en las rutas estándar (`/Library/TeX/texbin`, `/opt/homebrew/bin`, `/usr/local/bin`).
+
+**Instalación de MiKTeX (Windows):**
+1. Ve al sitio web oficial: [miktex.org/download](https://miktex.org/download)
+2. Descarga el instalador y ejecútalo.
+3. Durante la instalación, elige instalar los paquetes faltantes automáticamente.
+
+Después de instalar Pandoc y MacTeX/MiKTeX, es posible que deba reiniciar Obsidian por completo para que se reconozcan las nuevas rutas del sistema. El complemento Natural Move/Export busca automáticamente los programas requeridos en las rutas estándar (`/Library/TeX/texbin`, `/opt/homebrew/bin`, `/usr/local/bin`).
 
 ## Instalación en Obsidian
 

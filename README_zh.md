@@ -69,7 +69,7 @@ Obsidian 的文件资源管理器功能强大，但相对孤立。将文件从 O
 
 ### ⚠️ PDF 和 Beamer 导出重要提示 (MacTeX)
 
-Pandoc 需要后台的 LaTeX 发行版来生成 PDF 和 Beamer 演示文稿。在 Mac 上，**MacTeX** 是标准配置。
+Pandoc 需要后台的 LaTeX 发行版来生成 PDF 和 Beamer 演示文稿。在 Mac 上，**MacTeX** 是标准配置。在 Windows 上，推荐使用 **MiKTeX**。
 
 **安装 MacTeX (Mac)：**
 
@@ -84,7 +84,13 @@ brew install --cask mactex-no-gui
 1. 访问官方网站：[tug.org/mactex](https://www.tug.org/mactex/)
 2. 下载 `MacTeX.pkg` 文件并运行安装程序。
 
-安装 Pandoc 和 MacTeX 后，您可能需要完全重启 Obsidian 才能识别新的系统路径。Natural Move/Export 插件会自动在标准路径（`/Library/TeX/texbin`、`/opt/homebrew/bin`、`/usr/local/bin`）中搜索所需的程序。
+
+**安装 MiKTeX (Windows):**
+1. 访问官方网站：[miktex.org/download](https://miktex.org/download)
+2. 下载安装程序并运行。
+3. 在安装过程中，选择自动安装缺失的软件包。
+
+安装 Pandoc 和 MacTeX/MiKTeX 后，您可能需要完全重启 Obsidian 才能识别新的系统路径。Natural Move/Export 插件会自动在标准路径（`/Library/TeX/texbin`、`/opt/homebrew/bin`、`/usr/local/bin`）中搜索所需的程序。
 
 ## 在 Obsidian 中安装
 

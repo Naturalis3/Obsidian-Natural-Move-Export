@@ -576,7 +576,7 @@ pb's writeObjects:fileArray
 	private async createVideoThumbnail(videoFile: TFile, tempDir: string): Promise<string> {
 		return new Promise((resolve, reject) => {
 			const video = document.createElement('video');
-			video.style.display = 'none';
+			video.classList.add('natural-move-hidden-video');
 			video.muted = true;
 			video.src = this.app.vault.getResourcePath(videoFile);
 			video.crossOrigin = "anonymous";
@@ -585,7 +585,7 @@ pb's writeObjects:fileArray
 				video.currentTime = Math.min(1, video.duration / 2);
 			};
 
-			video.onseeked = async () => {
+			video.onseeked = () => {
 				try {
 					const canvas = document.createElement('canvas');
 					canvas.width = video.videoWidth || 640;
@@ -615,7 +615,7 @@ pb's writeObjects:fileArray
 						reject(new Error("Canvas context is null"));
 					}
 				} catch (e) {
-					reject(e);
+					reject(e instanceof Error ? e : new Error(String(e)));
 				} finally {
 					video.remove();
 				}
@@ -623,7 +623,7 @@ pb's writeObjects:fileArray
 
 			video.onerror = (e) => {
 				video.remove();
-				reject(e);
+				reject(new Error(`Error loading video: ${e}`));
 			};
 		});
 	}
@@ -651,13 +651,13 @@ pb's writeObjects:fileArray
 
 				if (['png', 'jpg', 'jpeg', 'gif', 'bmp', 'svg', 'webp'].includes(extension)) {
 					// Replace with absolute image link
-					content = content.replace(fullMatch, `![${altText}](file:///${safePath})`);
+					content = content.replace(fullMatch, `![${altText}](${safePath})`);
 				} else if (['mp4', 'webm', 'ogg', 'mov'].includes(extension)) {
 					// Video
 					try {
 						const thumbPath = await this.createVideoThumbnail(linkedFile, tempDir);
 						const safeThumbPath = thumbPath.replace(/\\/g, '/');
-						content = content.replace(fullMatch, `[![${altText}](file:///${safeThumbPath})](file:///${safePath})`);
+						content = content.replace(fullMatch, `[![${altText}](${safeThumbPath})](file:///${safePath})`);
 					} catch (e) {
 						console.error("Failed to generate thumbnail for", linkedFile.name, e);
 						// Fallback to text link
@@ -1012,6 +1012,24 @@ class NaturalMoveSettingTab extends PluginSettingTab {
 				}
 				return text;
 			});
+
+		const latexDesc = document.createDocumentFragment();
+		latexDesc.appendText(t('SETTING_LATEX_DESC') + ' ');
+		if (isWin) {
+			latexDesc.createEl('a', { 
+				text: t('SETTING_LATEX_WIN_BUTTON'), 
+				href: 'https://miktex.org/download' 
+			});
+		} else {
+			latexDesc.createEl('a', { 
+				text: t('SETTING_LATEX_MAC_BUTTON'), 
+				href: 'https://tug.org/mactex/mactex-download.html' 
+			});
+		}
+
+		new Setting(containerEl)
+			.setName(t('SETTING_LATEX_NAME'))
+			.setDesc(latexDesc);
 
 		new Setting(containerEl)
 			.setName(t('SETTING_CUSTOM_ARGS_NAME') + (!this.plugin.settings.isPro ? ' (Pro)' : ''))
