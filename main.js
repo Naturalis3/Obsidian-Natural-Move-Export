@@ -1444,7 +1444,7 @@ var NaturalMoveSettingTab = class extends import_obsidian2.PluginSettingTab {
       });
     }
     new import_obsidian2.Setting(containerEl).setName(t("SETTING_BUY_PRO_NAME")).setDesc(t("SETTING_BUY_PRO_DESC")).addButton((btn) => btn.setButtonText(t("SETTING_BUY_PRO_BUTTON")).onClick(() => {
-      window.open("https://naturalis.lemonsqueezy.com/checkout/buy/9223dcd2-5bd9-4787-a1cc-3972c78b067b");
+      window.open("https://naturalis.lemonsqueezy.com/checkout/buy/f5b938e2-8022-4eec-a18d-167020fba0e6");
     }));
     new import_obsidian2.Setting(containerEl).setName(t("SETTING_LICENSE_KEY_NAME")).setDesc(t("SETTING_LICENSE_KEY_DESC")).addText((text) => text.setPlaceholder("License key").setValue(this.plugin.settings.licenseKey).onChange(async (value) => {
       const trimmedValue = value.trim();
